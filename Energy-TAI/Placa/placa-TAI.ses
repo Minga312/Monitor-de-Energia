@@ -1,0 +1,295 @@
+
+
+(session "placa-TAI.ses"
+  (base_design "placa-TAI.dsn")
+  (placement
+    (resolution um 10)
+    (component esp32v1:MODULE_ESP32_DEVKIT_V1
+      (place U1 1572400 -768925 front 90)
+    )
+    (component Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical
+      (place J3 1365600 -1050000 front 0)
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+      (place R7 1231063 -686400 front 270)
+    )
+    (component Connector:JWT_A3963_1x02_P3.96mm_Vertical
+      (place J6 952763 -705425 front 270)
+    )
+    (component Connector:JWT_A3963_1x02_P3.96mm_Vertical::1
+      (place J1 955700 -889125 front 270)
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal::1
+      (place R2 1175500 -946300 front 90)
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal::2
+      (place R5 1041963 -762600 front 90)
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal::3
+      (place R8 1266175 -1105900 front 180)
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal::4
+      (place R1 1043700 -946300 front 90)
+    )
+    (component Connector:JWT_A3963_1x02_P3.96mm_Vertical::2
+      (place J5 993275 -1113400 front 180)
+    )
+    (component LED_THT:LED_D5.0mm_IRBlack
+      (place D3 1096000 -1105900 front 0)
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal::5
+      (place R6 1173963 -762600 front 90)
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal::6
+      (place R3 1234000 -870100 front 270)
+    )
+    (component Capacitor_THT:C_Disc_D11.0mm_W5.0mm_P10.00mm
+      (place C7 1110463 -674500 front 270)
+    )
+    (component Capacitor_THT:C_Disc_D11.0mm_W5.0mm_P10.00mm::1
+      (place C1 1110000 -858200 front 270)
+    )
+  )
+  (was_is
+  )
+  (routes 
+    (resolution um 10)
+    (parser
+      (host_cad "KiCad's Pcbnew")
+      (host_version "6.0.8-f2edbf62ab~116~ubuntu20.04.1")
+    )
+    (library_out 
+      (padstack "Via[0-1]_800:400_um"
+        (shape
+          (circle F.Cu 8000 0 0)
+        )
+        (shape
+          (circle B.Cu 8000 0 0)
+        )
+        (attach off)
+      )
+    )
+    (network_out 
+      (net "Net-(C1-Pad1)"
+        (wire
+          (path B.Cu 7000
+            1234000 -870100
+            1175500 -870100
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1175500 -870100
+            1160500 -870100
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1110000 -858200
+            1148600 -858200
+            1160500 -870100
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1058700 -870100
+            1070600 -858200
+            1110000 -858200
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1043700 -870100
+            1058700 -870100
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            955700 -889125
+            977700 -889125
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1043700 -870100
+            996725 -870100
+            977700 -889125
+          )
+        )
+      )
+      (net 3.3V
+        (wire
+          (path B.Cu 7000
+            1175500 -946300
+            1041005 -1080795
+            957646 -1080795
+            933970 -1104471
+            933970 -1121989
+            946434 -1134453
+            1237622 -1134453
+            1266175 -1105900
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1173963 -762600
+            1247552 -836189
+            1247552 -875878
+            1177130 -946300
+            1175500 -946300
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1360850 -1126200
+            1417250 -1069800
+            1417250 -895925
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1360850 -1126200
+            1350100 -1126200
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1365600 -1126200
+            1360850 -1126200
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1266175 -1105900
+            1329800 -1105900
+            1350100 -1126200
+          )
+        )
+      )
+      (net 5V
+        (wire
+          (path B.Cu 7000
+            993275 -1113400
+            1027655 -1113400
+            1417250 -723805
+            1417250 -641925
+          )
+        )
+      )
+      (net ADC1
+        (wire
+          (path B.Cu 7000
+            1365600 -1075400
+            1401746 -1039254
+            1401746 -883002
+            1525719 -759029
+            1554146 -759029
+            1671250 -641925
+          )
+        )
+      )
+      (net "Net-(C7-Pad1)"
+        (wire
+          (path B.Cu 7000
+            1173963 -686400
+            1158963 -686400
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1110463 -674500
+            1147063 -674500
+            1158963 -686400
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1056963 -686400
+            1068863 -674500
+            1110463 -674500
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1041963 -686400
+            1056963 -686400
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            952763 -705425
+            974763 -705425
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1041963 -686400
+            993788 -686400
+            974763 -705425
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1173963 -686400
+            1231063 -686400
+          )
+        )
+      )
+      (net ADC0
+        (wire
+          (path B.Cu 7000
+            1043700 -946300
+            974075 -946300
+            955700 -927925
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            1696650 -641925
+            1671774 -617049
+            1003160 -617049
+            932012 -688197
+            932012 -904237
+            955700 -927925
+          )
+        )
+      )
+      (net LED
+        (wire
+          (path B.Cu 7000
+            1096000 -1105900
+            1096000 -1064775
+            1518850 -641925
+          )
+        )
+      )
+      (net "Net-(D3-Pad2)"
+        (wire
+          (path B.Cu 7000
+            1121400 -1105900
+            1189975 -1105900
+          )
+        )
+      )
+      (net ADC2
+        (wire
+          (path B.Cu 7000
+            1041963 -762600
+            1100302 -704261
+            1309624 -704261
+            1387832 -626053
+            1629978 -626053
+            1645850 -641925
+          )
+        )
+        (wire
+          (path B.Cu 7000
+            952763 -744225
+            971138 -762600
+            1041963 -762600
+          )
+        )
+      )
+    )
+  )
+)
