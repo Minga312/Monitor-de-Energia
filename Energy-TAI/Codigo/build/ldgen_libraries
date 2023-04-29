@@ -3,6 +3,7 @@
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/asio/libasio.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader_support/libbootloader_support.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bt/libbt.a
+ /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/cbor/libcbor.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/coap/libcoap.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/console/libconsole.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/cxx/libcxx.a
@@ -19,8 +20,10 @@
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/esp_http_server/libesp_http_server.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/esp_https_ota/libesp_https_ota.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/esp_local_ctrl/libesp_local_ctrl.a
+ /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/esp_netif/libesp_netif.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/esp_ringbuf/libesp_ringbuf.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/esp_rom/libesp_rom.a
+ /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/esp_serial_slave_link/libesp_serial_slave_link.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/esp_websocket_client/libesp_websocket_client.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/esp_wifi/libesp_wifi.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/espcoredump/libespcoredump.a
@@ -43,6 +46,7 @@
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/nghttp/libnghttp.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/nvs_flash/libnvs_flash.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/openssl/libopenssl.a
+ /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/perfmon/libperfmon.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/protobuf-c/libprotobuf-c.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/protocomm/libprotocomm.a
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/pthread/libpthread.a

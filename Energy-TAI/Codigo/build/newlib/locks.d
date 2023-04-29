@@ -1,5 +1,5 @@
 locks.o: /home/walther/esp-idf/components/newlib/locks.c \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/cpu.h \
  /home/walther/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -9,6 +9,7 @@ locks.o: /home/walther/esp-idf/components/newlib/locks.c \
  /home/walther/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
  /home/walther/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/walther/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
@@ -34,7 +35,6 @@ locks.o: /home/walther/esp-idf/components/newlib/locks.c \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/queue.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portmacro.h \
@@ -42,7 +42,7 @@ locks.o: /home/walther/esp-idf/components/newlib/locks.c \
  /home/walther/esp-idf/components/freertos/include/freertos/list.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portable.h
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
 
@@ -61,6 +61,8 @@ locks.o: /home/walther/esp-idf/components/newlib/locks.c \
 /home/walther/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
@@ -111,8 +113,6 @@ locks.o: /home/walther/esp-idf/components/newlib/locks.c \
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/semphr.h:
 

@@ -1,6 +1,7 @@
 periph_ctrl.o: /home/walther/esp-idf/components/driver/periph_ctrl.c \
  /home/walther/esp-idf/components/esp_common/include/esp_types.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -30,12 +31,11 @@ periph_ctrl.o: /home/walther/esp-idf/components/driver/periph_ctrl.c \
  /home/walther/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/walther/esp-idf/components/heap/include/multi_heap.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/queue.h \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h \
@@ -45,12 +45,15 @@ periph_ctrl.o: /home/walther/esp-idf/components/driver/periph_ctrl.c \
  /home/walther/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/walther/esp-idf/components/esp32/include/esp32/dport_access.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/syscon_reg.h \
  /home/walther/esp-idf/components/driver/include/driver/periph_ctrl.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/periph_defs.h
 
 /home/walther/esp-idf/components/esp_common/include/esp_types.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
@@ -110,7 +113,7 @@ periph_ctrl.o: /home/walther/esp-idf/components/driver/periph_ctrl.c \
 
 /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
 
@@ -119,8 +122,6 @@ periph_ctrl.o: /home/walther/esp-idf/components/driver/periph_ctrl.c \
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/semphr.h:
 
@@ -139,6 +140,8 @@ periph_ctrl.o: /home/walther/esp-idf/components/driver/periph_ctrl.c \
 /home/walther/esp-idf/components/esp32/include/esp32/dport_access.h:
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/syscon_reg.h:
 
 /home/walther/esp-idf/components/driver/include/driver/periph_ctrl.h:
 

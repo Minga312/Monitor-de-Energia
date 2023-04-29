@@ -5,6 +5,7 @@ spi_flash_chip_drivers.o: \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/soc/include/hal/spi_flash_types.h \
  /home/walther/esp-idf/components/esp_common/include/esp_types.h \
  /home/walther/esp-idf/components/soc/include/hal/esp_flash_err.h \
@@ -21,6 +22,8 @@ spi_flash_chip_drivers.o: \
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/soc/include/hal/spi_flash_types.h:
 

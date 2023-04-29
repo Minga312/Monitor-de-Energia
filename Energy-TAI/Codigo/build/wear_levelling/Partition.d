@@ -7,6 +7,7 @@ Partition.o: \
  /home/walther/esp-idf/components/wear_levelling/private_include/Partition.h \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/wear_levelling/private_include/Flash_Access.h \
  /home/walther/esp-idf/components/spi_flash/include/esp_partition.h \
  /home/walther/esp-idf/components/spi_flash/include/esp_flash.h \
@@ -28,6 +29,8 @@ Partition.o: \
 /home/walther/esp-idf/components/esp_common/include/esp_err.h:
 
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/wear_levelling/private_include/Flash_Access.h:
 

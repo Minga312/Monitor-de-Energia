@@ -3,11 +3,12 @@ app_trace.o: /home/walther/esp-idf/components/app_trace/app_trace.c \
  /home/walther/esp-idf/components/esp_common/include/esp_assert.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/dport_access.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/esp32/include/esp32/dport_access.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  /home/walther/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
@@ -25,6 +26,7 @@ app_trace.o: /home/walther/esp-idf/components/app_trace/app_trace.c \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/xtensa/include/eri.h \
  /home/walther/esp-idf/components/xtensa/include/xtensa-debug-module.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/cpu.h \
  /home/walther/esp-idf/components/soc/include/soc/timer_periph.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h \
@@ -37,7 +39,6 @@ app_trace.o: /home/walther/esp-idf/components/app_trace/app_trace.c \
  /home/walther/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portable.h \
  /home/walther/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/cpu.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portmacro.h \
  /home/walther/esp-idf/components/esp_common/include/esp_private/crosscore_int.h \
  /home/walther/esp-idf/components/esp_common/include/esp_timer.h \
@@ -48,7 +49,6 @@ app_trace.o: /home/walther/esp-idf/components/app_trace/app_trace.c \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/app_trace/include/esp_app_trace.h \
  /home/walther/esp-idf/components/app_trace/include/esp_app_trace_util.h
 
@@ -60,6 +60,8 @@ app_trace.o: /home/walther/esp-idf/components/app_trace/app_trace.c \
 
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
 
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
+
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
@@ -68,7 +70,7 @@ app_trace.o: /home/walther/esp-idf/components/app_trace/app_trace.c \
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/dport_access.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/esp32/include/esp32/dport_access.h:
 
@@ -104,6 +106,8 @@ app_trace.o: /home/walther/esp-idf/components/app_trace/app_trace.c \
 
 /home/walther/esp-idf/components/xtensa/include/xtensa-debug-module.h:
 
+/home/walther/esp-idf/components/soc/esp32/include/soc/cpu.h:
+
 /home/walther/esp-idf/components/soc/include/soc/timer_periph.h:
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
@@ -128,8 +132,6 @@ app_trace.o: /home/walther/esp-idf/components/app_trace/app_trace.c \
 
 /home/walther/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
-/home/walther/esp-idf/components/soc/esp32/include/soc/cpu.h:
-
 /home/walther/esp-idf/components/freertos/include/freertos/portmacro.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_private/crosscore_int.h:
@@ -149,8 +151,6 @@ app_trace.o: /home/walther/esp-idf/components/app_trace/app_trace.c \
 /home/walther/esp-idf/components/esp_common/include/esp_system.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/app_trace/include/esp_app_trace.h:
 

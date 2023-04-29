@@ -1,6 +1,7 @@
 transport_ssl.o: \
  /home/walther/esp-idf/components/tcp_transport/transport_ssl.c \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -30,12 +31,11 @@ transport_ssl.o: \
  /home/walther/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/walther/esp-idf/components/heap/include/multi_heap.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/task.h \
  /home/walther/esp-idf/components/freertos/include/freertos/list.h \
  /home/walther/esp-idf/components/esp-tls/esp_tls.h \
@@ -124,6 +124,8 @@ transport_ssl.o: \
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
+
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
@@ -182,7 +184,7 @@ transport_ssl.o: \
 
 /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
 
@@ -191,8 +193,6 @@ transport_ssl.o: \
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/task.h:
 

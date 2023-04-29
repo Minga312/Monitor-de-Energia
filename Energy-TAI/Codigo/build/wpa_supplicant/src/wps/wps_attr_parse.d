@@ -9,6 +9,7 @@ src/wps/wps_attr_parse.o: \
  /home/walther/esp-idf/components/esp_common/include/esp_types.h \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/wpa_supplicant/port/include/endian.h \
  /home/walther/esp-idf/components/wpa_supplicant/port/include/byteswap.h \
@@ -43,6 +44,8 @@ src/wps/wps_attr_parse.o: \
 /home/walther/esp-idf/components/esp_common/include/esp_err.h:
 
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 

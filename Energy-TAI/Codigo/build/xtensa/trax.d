@@ -4,9 +4,10 @@ trax.o: /home/walther/esp-idf/components/xtensa/trax.c \
  /home/walther/esp-idf/components/esp_common/include/esp_assert.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/dport_access.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/esp32/include/esp32/dport_access.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  /home/walther/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
@@ -22,6 +23,7 @@ trax.o: /home/walther/esp-idf/components/xtensa/trax.c \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/xtensa/include/eri.h \
  /home/walther/esp-idf/components/xtensa/include/xtensa-debug-module.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/cpu.h \
  /home/walther/esp-idf/components/xtensa/include/trax.h \
  /home/walther/esp-idf/components/xtensa/include/eri.h \
  /home/walther/esp-idf/components/xtensa/include/xtensa-debug-module.h \
@@ -39,11 +41,13 @@ trax.o: /home/walther/esp-idf/components/xtensa/trax.c \
 
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
 
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
+
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/dport_access.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/esp32/include/esp32/dport_access.h:
 
@@ -74,6 +78,8 @@ trax.o: /home/walther/esp-idf/components/xtensa/trax.c \
 /home/walther/esp-idf/components/xtensa/include/eri.h:
 
 /home/walther/esp-idf/components/xtensa/include/xtensa-debug-module.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/cpu.h:
 
 /home/walther/esp-idf/components/xtensa/include/trax.h:
 

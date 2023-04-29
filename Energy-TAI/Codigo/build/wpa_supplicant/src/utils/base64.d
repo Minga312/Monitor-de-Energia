@@ -8,6 +8,7 @@ src/utils/base64.o: \
  /home/walther/esp-idf/components/esp_common/include/esp_types.h \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/wpa_supplicant/src/utils/base64.h
 
 /home/walther/esp-idf/components/wpa_supplicant/src/utils/includes.h:
@@ -25,6 +26,8 @@ src/utils/base64.o: \
 /home/walther/esp-idf/components/esp_common/include/esp_err.h:
 
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/wpa_supplicant/src/utils/base64.h:
 /home/walther/esp-idf/components/wpa_supplicant/src/utils/base64.c:

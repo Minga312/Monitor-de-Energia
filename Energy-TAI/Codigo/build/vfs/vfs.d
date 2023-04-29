@@ -1,6 +1,7 @@
 vfs.o: /home/walther/esp-idf/components/vfs/vfs.c \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/vfs/include/sys/ioctl.h \
  /home/walther/esp-idf/components/newlib/platform_include/sys/unistd.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -31,12 +32,11 @@ vfs.o: /home/walther/esp-idf/components/vfs/vfs.c \
  /home/walther/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/walther/esp-idf/components/heap/include/multi_heap.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/queue.h \
  /home/walther/esp-idf/components/vfs/include/esp_vfs.h \
@@ -48,6 +48,8 @@ vfs.o: /home/walther/esp-idf/components/vfs/vfs.c \
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/vfs/include/sys/ioctl.h:
 
@@ -109,7 +111,7 @@ vfs.o: /home/walther/esp-idf/components/vfs/vfs.c \
 
 /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
 
@@ -118,8 +120,6 @@ vfs.o: /home/walther/esp-idf/components/vfs/vfs.c \
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/semphr.h:
 

@@ -23,7 +23,8 @@ esp_tls.o: /home/walther/esp-idf/components/esp-tls/esp_tls.c \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
  /home/walther/esp-idf/components/lwip/include/apps/sntp/sntp.h \
@@ -49,7 +50,6 @@ esp_tls.o: /home/walther/esp-idf/components/esp-tls/esp_tls.c \
  /home/walther/esp-idf/components/heap/include/multi_heap.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/task.h \
  /home/walther/esp-idf/components/freertos/include/freertos/list.h \
  /home/walther/esp-idf/components/freertos/include/freertos/queue.h \
@@ -117,6 +117,8 @@ esp_tls.o: /home/walther/esp-idf/components/esp-tls/esp_tls.c \
  /home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/error.h \
  /home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/certs.h \
  /home/walther/esp-idf/components/esp-tls/private_include/esp_tls_error_capture_internal.h \
+ /home/walther/esp-idf/components/esp-tls/private_include/esp_tls_mbedtls.h \
+ /home/walther/esp-idf/components/esp-tls/esp_tls.h \
  /home/walther/esp-idf/components/log/include/esp_log.h \
  /home/walther/esp-idf/components/log/include/esp_log_internal.h
 
@@ -168,7 +170,9 @@ esp_tls.o: /home/walther/esp-idf/components/esp-tls/esp_tls.c \
 
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
+
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
@@ -219,8 +223,6 @@ esp_tls.o: /home/walther/esp-idf/components/esp-tls/esp_tls.c \
 /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/task.h:
 
@@ -355,6 +357,10 @@ esp_tls.o: /home/walther/esp-idf/components/esp-tls/esp_tls.c \
 /home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/certs.h:
 
 /home/walther/esp-idf/components/esp-tls/private_include/esp_tls_error_capture_internal.h:
+
+/home/walther/esp-idf/components/esp-tls/private_include/esp_tls_mbedtls.h:
+
+/home/walther/esp-idf/components/esp-tls/esp_tls.h:
 
 /home/walther/esp-idf/components/log/include/esp_log.h:
 

@@ -12,14 +12,14 @@ src/hal/spi_flash_hal.o: \
  /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
- /home/walther/esp-idf/components/soc/include/hal/spi_types.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/../include/sdkconfig.h \
+ /home/walther/esp-idf/components/soc/include/hal/spi_types.h \
  /home/walther/esp-idf/components/soc/include/hal/spi_flash_types.h \
  /home/walther/esp-idf/components/esp_common/include/esp_types.h \
  /home/walther/esp-idf/components/soc/include/hal/esp_flash_err.h \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/soc/include/soc/soc_memory_layout.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/soc/include/hal/hal_defs.h \
  /home/walther/esp-idf/components/log/include/esp_log.h \
  /home/walther/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
@@ -49,9 +49,9 @@ src/hal/spi_flash_hal.o: \
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
-/home/walther/esp-idf/components/soc/include/hal/spi_types.h:
-
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/../include/sdkconfig.h:
+
+/home/walther/esp-idf/components/soc/include/hal/spi_types.h:
 
 /home/walther/esp-idf/components/soc/include/hal/spi_flash_types.h:
 
@@ -63,7 +63,7 @@ src/hal/spi_flash_hal.o: \
 
 /home/walther/esp-idf/components/soc/include/soc/soc_memory_layout.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/soc/include/hal/hal_defs.h:
 

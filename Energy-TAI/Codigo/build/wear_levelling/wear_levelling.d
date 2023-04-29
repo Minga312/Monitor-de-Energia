@@ -8,6 +8,7 @@ wear_levelling.o: \
  /home/walther/esp-idf/components/spi_flash/include/esp_partition.h \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/spi_flash/include/esp_flash.h \
  /home/walther/esp-idf/components/soc/include/hal/spi_flash_types.h \
  /home/walther/esp-idf/components/esp_common/include/esp_types.h \
@@ -42,6 +43,8 @@ wear_levelling.o: \
 /home/walther/esp-idf/components/esp_common/include/esp_err.h:
 
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/spi_flash/include/esp_flash.h:
 

@@ -1,6 +1,7 @@
 modbus/mb.o: /home/walther/esp-idf/components/freemodbus/modbus/mb.c \
  /home/walther/esp-idf/components/freemodbus/port/port.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -30,21 +31,20 @@ modbus/mb.o: /home/walther/esp-idf/components/freemodbus/modbus/mb.c \
  /home/walther/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/walther/esp-idf/components/heap/include/multi_heap.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portmacro.h \
  /home/walther/esp-idf/components/log/include/esp_log.h \
  /home/walther/esp-idf/components/log/include/esp_log_internal.h \
- /home/walther/esp-idf/components/freemodbus/modbus/include/mbconfig.h \
  /home/walther/esp-idf/components/freemodbus/modbus/include/mb.h \
  /home/walther/esp-idf/components/freemodbus/modbus/include/mbport.h \
  /home/walther/esp-idf/components/freemodbus/modbus/include/mbconfig.h \
  /home/walther/esp-idf/components/freemodbus/modbus/include/mbproto.h \
+ /home/walther/esp-idf/components/freemodbus/modbus/include/mbconfig.h \
  /home/walther/esp-idf/components/freemodbus/modbus/include/mbframe.h \
  /home/walther/esp-idf/components/freemodbus/modbus/include/mbproto.h \
  /home/walther/esp-idf/components/freemodbus/modbus/include/mbfunc.h \
@@ -56,6 +56,8 @@ modbus/mb.o: /home/walther/esp-idf/components/freemodbus/modbus/mb.c \
 /home/walther/esp-idf/components/freemodbus/port/port.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
@@ -115,7 +117,7 @@ modbus/mb.o: /home/walther/esp-idf/components/freemodbus/modbus/mb.c \
 
 /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
 
@@ -125,8 +127,6 @@ modbus/mb.o: /home/walther/esp-idf/components/freemodbus/modbus/mb.c \
 
 /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h:
 
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
-
 /home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/portmacro.h:
@@ -135,8 +135,6 @@ modbus/mb.o: /home/walther/esp-idf/components/freemodbus/modbus/mb.c \
 
 /home/walther/esp-idf/components/log/include/esp_log_internal.h:
 
-/home/walther/esp-idf/components/freemodbus/modbus/include/mbconfig.h:
-
 /home/walther/esp-idf/components/freemodbus/modbus/include/mb.h:
 
 /home/walther/esp-idf/components/freemodbus/modbus/include/mbport.h:
@@ -144,6 +142,8 @@ modbus/mb.o: /home/walther/esp-idf/components/freemodbus/modbus/mb.c \
 /home/walther/esp-idf/components/freemodbus/modbus/include/mbconfig.h:
 
 /home/walther/esp-idf/components/freemodbus/modbus/include/mbproto.h:
+
+/home/walther/esp-idf/components/freemodbus/modbus/include/mbconfig.h:
 
 /home/walther/esp-idf/components/freemodbus/modbus/include/mbframe.h:
 

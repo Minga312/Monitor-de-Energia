@@ -1,14 +1,15 @@
 src/wps/wps_enrollee.o: \
  /home/walther/esp-idf/components/wpa_supplicant/src/wps/wps_enrollee.c \
- /home/walther/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
  /home/walther/esp-idf/components/wpa_supplicant/src/utils/includes.h \
  /home/walther/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h \
+ /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
+ /home/walther/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/walther/esp-idf/components/wpa_supplicant/src/utils/common.h \
  /home/walther/esp-idf/components/wpa_supplicant/port/include/os.h \
  /home/walther/esp-idf/components/esp_common/include/esp_types.h \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/wpa_supplicant/port/include/endian.h \
  /home/walther/esp-idf/components/wpa_supplicant/port/include/byteswap.h \
@@ -33,13 +34,13 @@ src/wps/wps_enrollee.o: \
  /home/walther/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h \
  /home/walther/esp-idf/components/wpa_supplicant/src/wps/wps_dev_attr.h
 
-/home/walther/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
-
-/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
-
 /home/walther/esp-idf/components/wpa_supplicant/src/utils/includes.h:
 
 /home/walther/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h:
+
+/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
+
+/home/walther/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
 /home/walther/esp-idf/components/wpa_supplicant/src/utils/common.h:
 
@@ -50,6 +51,8 @@ src/wps/wps_enrollee.o: \
 /home/walther/esp-idf/components/esp_common/include/esp_err.h:
 
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 

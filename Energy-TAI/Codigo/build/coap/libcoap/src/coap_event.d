@@ -26,7 +26,8 @@ libcoap/src/coap_event.o: \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
  /home/walther/esp-idf/components/lwip/include/apps/sntp/sntp.h \
@@ -52,7 +53,6 @@ libcoap/src/coap_event.o: \
  /home/walther/esp-idf/components/heap/include/multi_heap.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/task.h \
  /home/walther/esp-idf/components/freertos/include/freertos/list.h \
  /home/walther/esp-idf/components/freertos/include/freertos/queue.h \
@@ -83,16 +83,15 @@ libcoap/src/coap_event.o: \
  /home/walther/esp-idf/components/coap/libcoap/include/coap2/coap_io.h \
  /home/walther/esp-idf/components/coap/libcoap/include/coap2/address.h \
  /home/walther/esp-idf/components/coap/libcoap/include/coap2/coap_dtls.h \
- /home/walther/esp-idf/components/coap/libcoap/include/coap2/net.h \
- /home/walther/esp-idf/components/coap/libcoap/include/coap2/coap_session.h \
  /home/walther/esp-idf/components/coap/libcoap/include/coap2/coap_time.h \
- /home/walther/esp-idf/components/coap/libcoap/include/coap2/pdu.h \
- /home/walther/esp-idf/components/coap/libcoap/include/coap2/uri.h \
- /home/walther/esp-idf/components/coap/libcoap/include/coap2/str.h \
  /home/walther/esp-idf/components/coap/libcoap/include/coap2/coap_event.h \
  /home/walther/esp-idf/components/coap/libcoap/include/coap2/option.h \
  /home/walther/esp-idf/components/coap/libcoap/include/coap2/bits.h \
- /home/walther/esp-idf/components/coap/libcoap/include/coap2/prng.h
+ /home/walther/esp-idf/components/coap/libcoap/include/coap2/pdu.h \
+ /home/walther/esp-idf/components/coap/libcoap/include/coap2/uri.h \
+ /home/walther/esp-idf/components/coap/libcoap/include/coap2/str.h \
+ /home/walther/esp-idf/components/coap/libcoap/include/coap2/prng.h \
+ /home/walther/esp-idf/components/coap/libcoap/include/coap2/coap_session.h
 
 /home/walther/esp-idf/components/coap/libcoap/include/coap2/coap_event.h:
 
@@ -146,7 +145,9 @@ libcoap/src/coap_event.o: \
 
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
+
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
@@ -197,8 +198,6 @@ libcoap/src/coap_event.o: \
 /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/task.h:
 
@@ -260,17 +259,7 @@ libcoap/src/coap_event.o: \
 
 /home/walther/esp-idf/components/coap/libcoap/include/coap2/coap_dtls.h:
 
-/home/walther/esp-idf/components/coap/libcoap/include/coap2/net.h:
-
-/home/walther/esp-idf/components/coap/libcoap/include/coap2/coap_session.h:
-
 /home/walther/esp-idf/components/coap/libcoap/include/coap2/coap_time.h:
-
-/home/walther/esp-idf/components/coap/libcoap/include/coap2/pdu.h:
-
-/home/walther/esp-idf/components/coap/libcoap/include/coap2/uri.h:
-
-/home/walther/esp-idf/components/coap/libcoap/include/coap2/str.h:
 
 /home/walther/esp-idf/components/coap/libcoap/include/coap2/coap_event.h:
 
@@ -278,5 +267,13 @@ libcoap/src/coap_event.o: \
 
 /home/walther/esp-idf/components/coap/libcoap/include/coap2/bits.h:
 
+/home/walther/esp-idf/components/coap/libcoap/include/coap2/pdu.h:
+
+/home/walther/esp-idf/components/coap/libcoap/include/coap2/uri.h:
+
+/home/walther/esp-idf/components/coap/libcoap/include/coap2/str.h:
+
 /home/walther/esp-idf/components/coap/libcoap/include/coap2/prng.h:
+
+/home/walther/esp-idf/components/coap/libcoap/include/coap2/coap_session.h:
 /home/walther/esp-idf/components/coap/libcoap/src/coap_event.c:

@@ -40,11 +40,11 @@ void app_main()
 
     while (1)
     {
-        // float current = get_current();
-        // printf("CORRENTE: %.2f A\n", current);
+        float current = get_current();
+        printf("CORRENTE: %.2f A\n", current);
 
         float voltage = get_voltage();
-        printf("TENSAO: %.2f mv\n", voltage);
+        printf("TENSAO: %.2f V\n", voltage);
 
         vTaskDelay(pdMS_TO_TICKS(500));
     }
@@ -56,15 +56,17 @@ float get_current()
     adc1_config_channel_atten(channel_current, atten);
 
     uint32_t adc_raw = 0;
+    uint32_t higher_value = 0;
     for (int i = 0; i < NO_OF_SAMPLES; i++)
     {
-        adc_raw += adc1_get_raw((adc1_channel_t)channel_current);
+        adc_raw = adc1_get_raw((adc1_channel_t)channel_current);
+        if (adc_raw > higher_value)
+            higher_value = adc_raw;
     }
-    adc_raw /= NO_OF_SAMPLES;
 
-    printf("CORRENTE: RAW %d \n", adc_raw);
+    // printf("CORRENTE: RAW %d \n", higher_value);
 
-    float voltage = esp_adc_cal_raw_to_voltage(adc_raw, adc_chars);
+    float voltage = esp_adc_cal_raw_to_voltage(higher_value, adc_chars);
 
     // Registra o tempo final
     uint64_t tempo_final = esp_timer_get_time();
@@ -73,7 +75,7 @@ float get_current()
     uint64_t tempo_decorrido = tempo_final - tempo_inicio;
 
     // Imprime o tempo decorrido
-    printf("A instrução levou %lld us para ser executada\n", tempo_decorrido);
+    // printf("A instrução levou %lld us para ser executada\n", tempo_decorrido);
 
     return voltage * CURRENT_CONSTANT;
 }
@@ -81,14 +83,23 @@ float get_current()
 float get_voltage()
 {
     uint32_t adc_raw = 0;
-    for (int i = 0; i < NO_OF_SAMPLES; i++)
+    uint32_t higher_value = 0;
+    uint32_t clean_higher_value = 0;
+
+    for (int z = 0; z < 50; z++)
     {
-        adc_raw += adc1_get_raw((adc1_channel_t)channel_voltage);
+        for (int i = 0; i < NO_OF_SAMPLES; i++)
+        {
+            adc_raw = adc1_get_raw((adc1_channel_t)channel_voltage);
+            if (adc_raw > higher_value)
+                higher_value = adc_raw;
+        }
+        clean_higher_value += higher_value;
     }
-    adc_raw /= NO_OF_SAMPLES;
+    clean_higher_value /= 50;
 
-    printf("TENSAO: RAW %d \n", adc_raw);
+    // printf("TENSAO: RAW %d \n", higher_value);
 
-    float voltage = esp_adc_cal_raw_to_voltage(adc_raw, adc_chars);
-    return voltage;
+    float voltage = esp_adc_cal_raw_to_voltage(clean_higher_value, adc_chars);
+    return voltage * VOLTAGE_CONSTANT;
 }

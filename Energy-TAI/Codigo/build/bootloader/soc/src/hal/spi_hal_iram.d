@@ -1,7 +1,7 @@
 src/hal/spi_hal_iram.o: \
  /home/walther/esp-idf/components/soc/src/hal/spi_hal_iram.c \
  /home/walther/esp-idf/components/soc/include/hal/spi_hal.h \
- /home/walther/esp-idf/components/soc/include/hal/spi_ll.h \
+ /home/walther/esp-idf/components/soc/esp32/include/hal/spi_ll.h \
  /home/walther/esp-idf/components/soc/include/hal/hal_defs.h \
  /home/walther/esp-idf/components/log/include/esp_log.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/../include/sdkconfig.h \
@@ -24,7 +24,7 @@ src/hal/spi_hal_iram.o: \
 
 /home/walther/esp-idf/components/soc/include/hal/spi_hal.h:
 
-/home/walther/esp-idf/components/soc/include/hal/spi_ll.h:
+/home/walther/esp-idf/components/soc/esp32/include/hal/spi_ll.h:
 
 /home/walther/esp-idf/components/soc/include/hal/hal_defs.h:
 

@@ -1,7 +1,9 @@
 can.o: /home/walther/esp-idf/components/driver/can.c \
- /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
- /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
+ /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
+ /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/walther/esp-idf/components/xtensa/include/xtensa/hal.h \
  /home/walther/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
@@ -29,12 +31,11 @@ can.o: /home/walther/esp-idf/components/driver/can.c \
  /home/walther/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/walther/esp-idf/components/heap/include/multi_heap.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portmacro.h \
  /home/walther/esp-idf/components/freertos/include/freertos/task.h \
  /home/walther/esp-idf/components/freertos/include/freertos/list.h \
@@ -52,32 +53,42 @@ can.o: /home/walther/esp-idf/components/driver/can.c \
  /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/walther/esp-idf/components/esp_common/include/esp_assert.h \
  /home/walther/esp-idf/components/soc/include/soc/rtc_periph.h \
+ /home/walther/esp-idf/components/soc/include/soc/rtc_io_periph.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/rtc_io_caps.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/rtc_io_channel.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/rtc_io_struct.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/rtc_cntl_struct.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
- /home/walther/esp-idf/components/soc/include/soc/can_periph.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/can_struct.h \
- /home/walther/esp-idf/components/driver/include/driver/gpio.h \
- /home/walther/esp-idf/components/esp_rom/include/esp32/rom/gpio.h \
+ /home/walther/esp-idf/components/soc/include/hal/gpio_types.h \
  /home/walther/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_caps.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
+ /home/walther/esp-idf/components/driver/include/driver/gpio.h \
+ /home/walther/esp-idf/components/esp_rom/include/esp32/rom/gpio.h \
  /home/walther/esp-idf/components/driver/include/driver/periph_ctrl.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
  /home/walther/esp-idf/components/driver/include/driver/can.h \
- /home/walther/esp-idf/components/driver/include/driver/gpio.h
+ /home/walther/esp-idf/components/soc/esp32/include/soc/can_caps.h \
+ /home/walther/esp-idf/components/soc/include/hal/can_types.h \
+ /home/walther/esp-idf/components/soc/include/soc/can_periph.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/can_struct.h \
+ /home/walther/esp-idf/components/soc/include/hal/can_hal.h \
+ /home/walther/esp-idf/components/soc/esp32/include/hal/can_ll.h
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/soc_caps.h:
+
+/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
-/home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
-/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
+/home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -133,7 +144,7 @@ can.o: /home/walther/esp-idf/components/driver/can.c \
 
 /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
 
@@ -142,8 +153,6 @@ can.o: /home/walther/esp-idf/components/driver/can.c \
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/portmacro.h:
 
@@ -179,6 +188,12 @@ can.o: /home/walther/esp-idf/components/driver/can.c \
 
 /home/walther/esp-idf/components/soc/include/soc/rtc_periph.h:
 
+/home/walther/esp-idf/components/soc/include/soc/rtc_io_periph.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/rtc_io_caps.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/rtc_io_channel.h:
+
 /home/walther/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h:
@@ -189,17 +204,7 @@ can.o: /home/walther/esp-idf/components/driver/can.c \
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/rtc_cntl_struct.h:
 
-/home/walther/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h:
-
-/home/walther/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
-
-/home/walther/esp-idf/components/soc/include/soc/can_periph.h:
-
-/home/walther/esp-idf/components/soc/esp32/include/soc/can_struct.h:
-
-/home/walther/esp-idf/components/driver/include/driver/gpio.h:
-
-/home/walther/esp-idf/components/esp_rom/include/esp32/rom/gpio.h:
+/home/walther/esp-idf/components/soc/include/hal/gpio_types.h:
 
 /home/walther/esp-idf/components/soc/include/soc/gpio_periph.h:
 
@@ -209,7 +214,13 @@ can.o: /home/walther/esp-idf/components/driver/can.c \
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
+/home/walther/esp-idf/components/soc/esp32/include/soc/gpio_caps.h:
+
 /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
+
+/home/walther/esp-idf/components/driver/include/driver/gpio.h:
+
+/home/walther/esp-idf/components/esp_rom/include/esp32/rom/gpio.h:
 
 /home/walther/esp-idf/components/driver/include/driver/periph_ctrl.h:
 
@@ -217,5 +228,15 @@ can.o: /home/walther/esp-idf/components/driver/can.c \
 
 /home/walther/esp-idf/components/driver/include/driver/can.h:
 
-/home/walther/esp-idf/components/driver/include/driver/gpio.h:
+/home/walther/esp-idf/components/soc/esp32/include/soc/can_caps.h:
+
+/home/walther/esp-idf/components/soc/include/hal/can_types.h:
+
+/home/walther/esp-idf/components/soc/include/soc/can_periph.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/can_struct.h:
+
+/home/walther/esp-idf/components/soc/include/hal/can_hal.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/hal/can_ll.h:
 /home/walther/esp-idf/components/driver/./can.c:

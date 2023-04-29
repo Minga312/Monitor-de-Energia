@@ -9,6 +9,7 @@ src/crypto/sha1-pbkdf2.o: \
  /home/walther/esp-idf/components/esp_common/include/esp_types.h \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/wpa_supplicant/port/include/endian.h \
  /home/walther/esp-idf/components/wpa_supplicant/port/include/byteswap.h \
@@ -19,7 +20,16 @@ src/crypto/sha1-pbkdf2.o: \
  /home/walther/esp-idf/components/log/include/esp_log_internal.h \
  /home/walther/esp-idf/components/wpa_supplicant/src/crypto/sha1.h \
  /home/walther/esp-idf/components/wpa_supplicant/src/crypto/md5.h \
- /home/walther/esp-idf/components/wpa_supplicant/src/crypto/crypto.h
+ /home/walther/esp-idf/components/wpa_supplicant/src/crypto/crypto.h \
+ /home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pkcs5.h \
+ /home/walther/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
+ /home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h \
+ /home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
+ /home/walther/esp-idf/components/mbedtls/port/include/esp_mem.h \
+ /home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
+ /home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h \
+ /home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h \
+ /home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h
 
 /home/walther/esp-idf/components/wpa_supplicant/src/utils/includes.h:
 
@@ -38,6 +48,8 @@ src/crypto/sha1-pbkdf2.o: \
 /home/walther/esp-idf/components/esp_common/include/esp_err.h:
 
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
@@ -60,4 +72,22 @@ src/crypto/sha1-pbkdf2.o: \
 /home/walther/esp-idf/components/wpa_supplicant/src/crypto/md5.h:
 
 /home/walther/esp-idf/components/wpa_supplicant/src/crypto/crypto.h:
+
+/home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pkcs5.h:
+
+/home/walther/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
+
+/home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h:
+
+/home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
+
+/home/walther/esp-idf/components/mbedtls/port/include/esp_mem.h:
+
+/home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
+
+/home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h:
+
+/home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h:
+
+/home/walther/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h:
 /home/walther/esp-idf/components/wpa_supplicant/src/crypto/sha1-pbkdf2.c:

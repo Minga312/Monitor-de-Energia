@@ -22,7 +22,8 @@ port/esp32/netif/ethernetif.o: \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
  /home/walther/esp-idf/components/lwip/include/apps/sntp/sntp.h \
@@ -48,7 +49,6 @@ port/esp32/netif/ethernetif.o: \
  /home/walther/esp-idf/components/heap/include/multi_heap.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/task.h \
  /home/walther/esp-idf/components/freertos/include/freertos/list.h \
  /home/walther/esp-idf/components/freertos/include/freertos/queue.h \
@@ -89,6 +89,7 @@ port/esp32/netif/ethernetif.o: \
  /home/walther/esp-idf/components/esp_eth/include/esp_eth_mac.h \
  /home/walther/esp-idf/components/driver/include/driver/spi_master.h \
  /home/walther/esp-idf/components/driver/include/driver/spi_common.h \
+ /home/walther/esp-idf/components/soc/include/soc/lldesc.h \
  /home/walther/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h \
  /home/walther/esp-idf/components/soc/include/soc/spi_periph.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -101,11 +102,19 @@ port/esp32/netif/ethernetif.o: \
  /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/walther/esp-idf/components/soc/include/hal/spi_types.h \
  /home/walther/esp-idf/components/esp_eth/include/esp_eth_phy.h \
- /home/walther/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
+ /home/walther/esp-idf/components/esp_netif/include/esp_netif.h \
  /home/walther/esp-idf/components/esp_wifi/include/esp_wifi_types.h \
  /home/walther/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_types_private.h \
  /home/walther/esp-idf/components/esp_common/include/esp_interface.h \
- /home/walther/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h
+ /home/walther/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
+ /home/walther/esp-idf/components/esp_netif/include/esp_netif_types.h \
+ /home/walther/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
+ /home/walther/esp-idf/components/esp_eth/include/esp_eth_netif_glue.h \
+ /home/walther/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
+ /home/walther/esp-idf/components/tcpip_adapter/include/tcpip_adapter_types.h \
+ /home/walther/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h \
+ /home/walther/esp-idf/components/esp_netif/include/esp_netif_sta_list.h \
+ /home/walther/esp-idf/components/esp_netif/include/esp_netif_net_stack.h
 
 /home/walther/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:
 
@@ -151,7 +160,9 @@ port/esp32/netif/ethernetif.o: \
 
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
+
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
@@ -202,8 +213,6 @@ port/esp32/netif/ethernetif.o: \
 /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/task.h:
 
@@ -285,6 +294,8 @@ port/esp32/netif/ethernetif.o: \
 
 /home/walther/esp-idf/components/driver/include/driver/spi_common.h:
 
+/home/walther/esp-idf/components/soc/include/soc/lldesc.h:
+
 /home/walther/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h:
 
 /home/walther/esp-idf/components/soc/include/soc/spi_periph.h:
@@ -309,7 +320,7 @@ port/esp32/netif/ethernetif.o: \
 
 /home/walther/esp-idf/components/esp_eth/include/esp_eth_phy.h:
 
-/home/walther/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h:
+/home/walther/esp-idf/components/esp_netif/include/esp_netif.h:
 
 /home/walther/esp-idf/components/esp_wifi/include/esp_wifi_types.h:
 
@@ -317,5 +328,21 @@ port/esp32/netif/ethernetif.o: \
 
 /home/walther/esp-idf/components/esp_common/include/esp_interface.h:
 
+/home/walther/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:
+
+/home/walther/esp-idf/components/esp_netif/include/esp_netif_types.h:
+
+/home/walther/esp-idf/components/esp_netif/include/esp_netif_defaults.h:
+
+/home/walther/esp-idf/components/esp_eth/include/esp_eth_netif_glue.h:
+
+/home/walther/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h:
+
+/home/walther/esp-idf/components/tcpip_adapter/include/tcpip_adapter_types.h:
+
 /home/walther/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h:
+
+/home/walther/esp-idf/components/esp_netif/include/esp_netif_sta_list.h:
+
+/home/walther/esp-idf/components/esp_netif/include/esp_netif_net_stack.h:
 /home/walther/esp-idf/components/lwip/port/esp32/netif/ethernetif.c:

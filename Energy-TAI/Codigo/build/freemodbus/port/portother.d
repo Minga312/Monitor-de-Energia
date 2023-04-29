@@ -1,6 +1,7 @@
 port/portother.o: \
  /home/walther/esp-idf/components/freemodbus/port/portother.c \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -30,12 +31,11 @@ port/portother.o: \
  /home/walther/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/walther/esp-idf/components/heap/include/multi_heap.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/task.h \
  /home/walther/esp-idf/components/freertos/include/freertos/list.h \
  /home/walther/esp-idf/components/freemodbus/modbus/include/mb.h \
@@ -44,35 +44,32 @@ port/portother.o: \
  /home/walther/esp-idf/components/freertos/include/freertos/portmacro.h \
  /home/walther/esp-idf/components/log/include/esp_log.h \
  /home/walther/esp-idf/components/log/include/esp_log_internal.h \
- /home/walther/esp-idf/components/freemodbus/modbus/include/mbconfig.h \
  /home/walther/esp-idf/components/freemodbus/modbus/include/mbport.h \
  /home/walther/esp-idf/components/freemodbus/modbus/include/mbconfig.h \
  /home/walther/esp-idf/components/freemodbus/modbus/include/mbproto.h \
  /home/walther/esp-idf/components/freemodbus/modbus/include/mbport.h \
  /home/walther/esp-idf/components/freemodbus/serial_slave/port/port_serial_slave.h \
  /home/walther/esp-idf/components/driver/include/driver/uart.h \
- /home/walther/esp-idf/components/soc/include/soc/uart_periph.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/uart_caps.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/walther/esp-idf/components/esp_common/include/esp_assert.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/uart_struct.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/uart_channel.h \
  /home/walther/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/walther/esp-idf/components/driver/include/driver/periph_ctrl.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
  /home/walther/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/queue.h \
  /home/walther/esp-idf/components/freertos/include/freertos/queue.h \
  /home/walther/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h \
- /home/walther/esp-idf/components/esp_common/include/esp_types.h \
+ /home/walther/esp-idf/components/soc/include/hal/uart_types.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/uart_caps.h \
  /home/walther/esp-idf/components/driver/include/driver/timer.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_assert.h \
  /home/walther/esp-idf/components/soc/include/soc/timer_periph.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h
+ /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h \
+ /home/walther/esp-idf/components/soc/include/hal/timer_types.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_caps.h
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
@@ -132,7 +129,7 @@ port/portother.o: \
 
 /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
 
@@ -141,8 +138,6 @@ port/portother.o: \
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/task.h:
 
@@ -160,8 +155,6 @@ port/portother.o: \
 
 /home/walther/esp-idf/components/log/include/esp_log_internal.h:
 
-/home/walther/esp-idf/components/freemodbus/modbus/include/mbconfig.h:
-
 /home/walther/esp-idf/components/freemodbus/modbus/include/mbport.h:
 
 /home/walther/esp-idf/components/freemodbus/modbus/include/mbconfig.h:
@@ -174,25 +167,7 @@ port/portother.o: \
 
 /home/walther/esp-idf/components/driver/include/driver/uart.h:
 
-/home/walther/esp-idf/components/soc/include/soc/uart_periph.h:
-
-/home/walther/esp-idf/components/soc/esp32/include/soc/uart_caps.h:
-
-/home/walther/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
-
-/home/walther/esp-idf/components/soc/esp32/include/soc/soc.h:
-
-/home/walther/esp-idf/components/esp_common/include/esp_assert.h:
-
-/home/walther/esp-idf/components/soc/esp32/include/soc/uart_struct.h:
-
-/home/walther/esp-idf/components/soc/esp32/include/soc/uart_channel.h:
-
 /home/walther/esp-idf/components/esp32/include/esp_intr_alloc.h:
-
-/home/walther/esp-idf/components/driver/include/driver/periph_ctrl.h:
-
-/home/walther/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/semphr.h:
 
@@ -202,15 +177,25 @@ port/portother.o: \
 
 /home/walther/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h:
 
-/home/walther/esp-idf/components/esp_common/include/esp_types.h:
+/home/walther/esp-idf/components/soc/include/hal/uart_types.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/uart_caps.h:
 
 /home/walther/esp-idf/components/driver/include/driver/timer.h:
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h:
 
+/home/walther/esp-idf/components/esp_common/include/esp_assert.h:
+
 /home/walther/esp-idf/components/soc/include/soc/timer_periph.h:
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
 
+/home/walther/esp-idf/components/soc/esp32/include/soc/soc.h:
+
 /home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h:
+
+/home/walther/esp-idf/components/soc/include/hal/timer_types.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_caps.h:
 /home/walther/esp-idf/components/freemodbus/port/portother.c:

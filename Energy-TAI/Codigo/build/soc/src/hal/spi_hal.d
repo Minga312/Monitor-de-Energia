@@ -1,6 +1,6 @@
 src/hal/spi_hal.o: /home/walther/esp-idf/components/soc/src/hal/spi_hal.c \
  /home/walther/esp-idf/components/soc/include/hal/spi_hal.h \
- /home/walther/esp-idf/components/soc/include/hal/spi_ll.h \
+ /home/walther/esp-idf/components/soc/esp32/include/hal/spi_ll.h \
  /home/walther/esp-idf/components/soc/include/hal/hal_defs.h \
  /home/walther/esp-idf/components/log/include/esp_log.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
@@ -10,6 +10,7 @@ src/hal/spi_hal.o: /home/walther/esp-idf/components/soc/src/hal/spi_hal.c \
  /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/walther/esp-idf/components/esp_common/include/esp_assert.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/spi_caps.h \
@@ -24,7 +25,7 @@ src/hal/spi_hal.o: /home/walther/esp-idf/components/soc/src/hal/spi_hal.c \
 
 /home/walther/esp-idf/components/soc/include/hal/spi_hal.h:
 
-/home/walther/esp-idf/components/soc/include/hal/spi_ll.h:
+/home/walther/esp-idf/components/soc/esp32/include/hal/spi_ll.h:
 
 /home/walther/esp-idf/components/soc/include/hal/hal_defs.h:
 
@@ -43,6 +44,8 @@ src/hal/spi_hal.o: /home/walther/esp-idf/components/soc/src/hal/spi_hal.c \
 /home/walther/esp-idf/components/esp_common/include/esp_assert.h:
 
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 

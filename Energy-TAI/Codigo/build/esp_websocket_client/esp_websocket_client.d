@@ -2,6 +2,7 @@ esp_websocket_client.o: \
  /home/walther/esp-idf/components/esp_websocket_client/esp_websocket_client.c \
  /home/walther/esp-idf/components/esp_websocket_client/include/esp_websocket_client.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -31,12 +32,11 @@ esp_websocket_client.o: \
  /home/walther/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/walther/esp-idf/components/heap/include/multi_heap.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/esp_event/include/esp_event.h \
  /home/walther/esp-idf/components/freertos/include/freertos/task.h \
  /home/walther/esp-idf/components/freertos/include/freertos/list.h \
@@ -49,7 +49,31 @@ esp_websocket_client.o: \
  /home/walther/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_types_private.h \
  /home/walther/esp-idf/components/esp_common/include/esp_interface.h \
  /home/walther/esp-idf/components/esp_event/include/esp_event_base.h \
+ /home/walther/esp-idf/components/esp_netif/include/esp_netif.h \
+ /home/walther/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
+ /home/walther/esp-idf/components/esp_netif/include/esp_netif_types.h \
+ /home/walther/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
+ /home/walther/esp-idf/components/esp_eth/include/esp_eth_netif_glue.h \
+ /home/walther/esp-idf/components/esp_eth/include/esp_eth.h \
+ /home/walther/esp-idf/components/esp_eth/include/esp_eth_com.h \
+ /home/walther/esp-idf/components/esp_eth/include/esp_eth_mac.h \
+ /home/walther/esp-idf/components/driver/include/driver/spi_master.h \
+ /home/walther/esp-idf/components/driver/include/driver/spi_common.h \
+ /home/walther/esp-idf/components/soc/include/soc/lldesc.h \
+ /home/walther/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h \
+ /home/walther/esp-idf/components/soc/include/soc/spi_periph.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_assert.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/spi_caps.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/spi_reg.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
+ /home/walther/esp-idf/components/soc/include/hal/spi_types.h \
+ /home/walther/esp-idf/components/esp_eth/include/esp_eth_phy.h \
  /home/walther/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
+ /home/walther/esp-idf/components/tcpip_adapter/include/tcpip_adapter_types.h \
  /home/walther/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h \
  /home/walther/esp-idf/components/lwip/lwip/src/include/lwip/opt.h \
  /home/walther/esp-idf/components/lwip/port/esp32/include/lwipopts.h \
@@ -72,7 +96,7 @@ esp_websocket_client.o: \
  /home/walther/esp-idf/components/lwip/lwip/src/include/lwip/def.h \
  /home/walther/esp-idf/components/lwip/lwip/src/include/lwip/ip6_zone.h \
  /home/walther/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h \
- /home/walther/esp-idf/components/esp_event/include/esp_event_loop.h \
+ /home/walther/esp-idf/components/esp_netif/include/esp_netif_sta_list.h \
  /home/walther/esp-idf/components/tcp_transport/include/esp_transport.h \
  /home/walther/esp-idf/components/tcp_transport/include/esp_transport_tcp.h \
  /home/walther/esp-idf/components/tcp_transport/include/esp_transport.h \
@@ -141,6 +165,8 @@ esp_websocket_client.o: \
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
+
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
@@ -199,7 +225,7 @@ esp_websocket_client.o: \
 
 /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
 
@@ -208,8 +234,6 @@ esp_websocket_client.o: \
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/esp_event/include/esp_event.h:
 
@@ -235,7 +259,55 @@ esp_websocket_client.o: \
 
 /home/walther/esp-idf/components/esp_event/include/esp_event_base.h:
 
+/home/walther/esp-idf/components/esp_netif/include/esp_netif.h:
+
+/home/walther/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:
+
+/home/walther/esp-idf/components/esp_netif/include/esp_netif_types.h:
+
+/home/walther/esp-idf/components/esp_netif/include/esp_netif_defaults.h:
+
+/home/walther/esp-idf/components/esp_eth/include/esp_eth_netif_glue.h:
+
+/home/walther/esp-idf/components/esp_eth/include/esp_eth.h:
+
+/home/walther/esp-idf/components/esp_eth/include/esp_eth_com.h:
+
+/home/walther/esp-idf/components/esp_eth/include/esp_eth_mac.h:
+
+/home/walther/esp-idf/components/driver/include/driver/spi_master.h:
+
+/home/walther/esp-idf/components/driver/include/driver/spi_common.h:
+
+/home/walther/esp-idf/components/soc/include/soc/lldesc.h:
+
+/home/walther/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h:
+
+/home/walther/esp-idf/components/soc/include/soc/spi_periph.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_assert.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/spi_caps.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/spi_reg.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/spi_struct.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
+
+/home/walther/esp-idf/components/soc/include/hal/spi_types.h:
+
+/home/walther/esp-idf/components/esp_eth/include/esp_eth_phy.h:
+
 /home/walther/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h:
+
+/home/walther/esp-idf/components/tcpip_adapter/include/tcpip_adapter_types.h:
 
 /home/walther/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:
 
@@ -281,7 +353,7 @@ esp_websocket_client.o: \
 
 /home/walther/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h:
 
-/home/walther/esp-idf/components/esp_event/include/esp_event_loop.h:
+/home/walther/esp-idf/components/esp_netif/include/esp_netif_sta_list.h:
 
 /home/walther/esp-idf/components/tcp_transport/include/esp_transport.h:
 

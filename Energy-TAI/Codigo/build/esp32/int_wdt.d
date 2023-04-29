@@ -1,6 +1,7 @@
 int_wdt.o: /home/walther/esp-idf/components/esp32/int_wdt.c \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/walther/esp-idf/components/xtensa/include/xtensa/hal.h \
@@ -29,12 +30,11 @@ int_wdt.o: /home/walther/esp-idf/components/esp32/int_wdt.c \
  /home/walther/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/walther/esp-idf/components/heap/include/multi_heap.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/task.h \
  /home/walther/esp-idf/components/freertos/include/freertos/list.h \
  /home/walther/esp-idf/components/esp_common/include/esp_types.h \
@@ -48,16 +48,22 @@ int_wdt.o: /home/walther/esp-idf/components/esp32/int_wdt.c \
  /home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h \
  /home/walther/esp-idf/components/driver/include/driver/timer.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/walther/esp-idf/components/soc/include/hal/timer_types.h \
+ /home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_caps.h \
  /home/walther/esp-idf/components/driver/include/driver/periph_ctrl.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_int_wdt.h \
+ /home/walther/esp-idf/components/soc/esp32/include/hal/timer_ll.h \
  /home/walther/esp-idf/components/efuse/include/esp_efuse.h \
  /home/walther/esp-idf/components/log/include/esp_log.h \
- /home/walther/esp-idf/components/log/include/esp_log_internal.h
+ /home/walther/esp-idf/components/log/include/esp_log_internal.h \
+ /home/walther/esp-idf/components/efuse/include/esp32/esp_efuse.h
 
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
@@ -115,7 +121,7 @@ int_wdt.o: /home/walther/esp-idf/components/esp32/int_wdt.c \
 
 /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
 
@@ -124,8 +130,6 @@ int_wdt.o: /home/walther/esp-idf/components/esp32/int_wdt.c \
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/task.h:
 
@@ -153,15 +157,23 @@ int_wdt.o: /home/walther/esp-idf/components/esp32/int_wdt.c \
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h:
 
+/home/walther/esp-idf/components/soc/include/hal/timer_types.h:
+
+/home/walther/esp-idf/components/soc/esp32/include/soc/timer_group_caps.h:
+
 /home/walther/esp-idf/components/driver/include/driver/periph_ctrl.h:
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_int_wdt.h:
 
+/home/walther/esp-idf/components/soc/esp32/include/hal/timer_ll.h:
+
 /home/walther/esp-idf/components/efuse/include/esp_efuse.h:
 
 /home/walther/esp-idf/components/log/include/esp_log.h:
 
 /home/walther/esp-idf/components/log/include/esp_log_internal.h:
+
+/home/walther/esp-idf/components/efuse/include/esp32/esp_efuse.h:
 /home/walther/esp-idf/components/esp32/./int_wdt.c:

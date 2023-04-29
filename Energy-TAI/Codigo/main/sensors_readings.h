@@ -5,10 +5,10 @@
 #include "esp_timer.h"
 
 #define DEFAULT_VREF 1100 // Use adc2_vref_to_gpio() to obtain a better estimate
-#define NO_OF_SAMPLES 16  // Multisampling
+#define NO_OF_SAMPLES 200 // Multisampling
 #define RESISTOR 22.0
 #define CURRENT_CONSTANT 1
-#define VOLTAGE_CONSTANT 2.8 / 180.0// Calculado empiricamente para ter maior precisao 
+#define VOLTAGE_CONSTANT 0.05656854249 // Calculado empiricamente para ter maior precisao
 
 struct Sensor
 {

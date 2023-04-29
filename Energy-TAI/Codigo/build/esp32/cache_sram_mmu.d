@@ -3,11 +3,12 @@ cache_sram_mmu.o: /home/walther/esp-idf/components/esp32/cache_sram_mmu.c \
  /home/walther/esp-idf/components/esp_common/include/esp_assert.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/dport_access.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/esp32/include/esp32/dport_access.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  /home/walther/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
@@ -31,6 +32,8 @@ cache_sram_mmu.o: /home/walther/esp-idf/components/esp32/cache_sram_mmu.c \
 
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
 
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
+
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
@@ -39,7 +42,7 @@ cache_sram_mmu.o: /home/walther/esp-idf/components/esp32/cache_sram_mmu.c \
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/dport_access.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/esp32/include/esp32/dport_access.h:
 

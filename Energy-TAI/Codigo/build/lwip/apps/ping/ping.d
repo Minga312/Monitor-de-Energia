@@ -21,7 +21,8 @@ apps/ping/ping.o: /home/walther/esp-idf/components/lwip/apps/ping/ping.c \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
  /home/walther/esp-idf/components/lwip/include/apps/sntp/sntp.h \
@@ -47,7 +48,6 @@ apps/ping/ping.o: /home/walther/esp-idf/components/lwip/apps/ping/ping.c \
  /home/walther/esp-idf/components/heap/include/multi_heap.h \
  /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/task.h \
  /home/walther/esp-idf/components/freertos/include/freertos/list.h \
  /home/walther/esp-idf/components/freertos/include/freertos/queue.h \
@@ -89,6 +89,7 @@ apps/ping/ping.o: /home/walther/esp-idf/components/lwip/apps/ping/ping.c \
  /home/walther/esp-idf/components/newlib/platform_include/sys/poll.h \
  /home/walther/esp-idf/components/lwip/lwip/src/include/lwip/inet.h \
  /home/walther/esp-idf/components/lwip/lwip/src/include/lwip/errno.h \
+ /home/walther/esp-idf/components/lwip/include/apps/ping/ping_sock.h \
  /home/walther/esp-idf/components/lwip/include/apps/esp_ping.h
 
 /home/walther/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:
@@ -135,7 +136,9 @@ apps/ping/ping.o: /home/walther/esp-idf/components/lwip/apps/ping/ping.c \
 
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
+
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
@@ -186,8 +189,6 @@ apps/ping/ping.o: /home/walther/esp-idf/components/lwip/apps/ping/ping.c \
 /home/walther/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
-
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/task.h:
 
@@ -270,6 +271,8 @@ apps/ping/ping.o: /home/walther/esp-idf/components/lwip/apps/ping/ping.c \
 /home/walther/esp-idf/components/lwip/lwip/src/include/lwip/inet.h:
 
 /home/walther/esp-idf/components/lwip/lwip/src/include/lwip/errno.h:
+
+/home/walther/esp-idf/components/lwip/include/apps/ping/ping_sock.h:
 
 /home/walther/esp-idf/components/lwip/include/apps/esp_ping.h:
 /home/walther/esp-idf/components/lwip/apps/ping/ping.c:

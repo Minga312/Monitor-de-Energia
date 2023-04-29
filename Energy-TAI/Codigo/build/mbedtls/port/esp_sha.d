@@ -1,6 +1,7 @@
 port/esp_sha.o: /home/walther/esp-idf/components/mbedtls/port/esp_sha.c \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/mbedtls/port/include/esp32/sha.h \
  /home/walther/esp-idf/components/esp_rom/include/esp32/rom/sha.h \
  /home/walther/esp-idf/components/esp_common/include/esp_types.h \
@@ -19,6 +20,8 @@ port/esp_sha.o: /home/walther/esp-idf/components/mbedtls/port/esp_sha.c \
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
+
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/walther/esp-idf/components/mbedtls/port/include/esp32/sha.h:
 

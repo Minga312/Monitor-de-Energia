@@ -1,11 +1,14 @@
 src/nvs_api.o: /home/walther/esp-idf/components/nvs_flash/src/nvs_api.cpp \
  /home/walther/esp-idf/components/nvs_flash/src/nvs.hpp \
  /home/walther/esp-idf/components/nvs_flash/include/nvs.h \
- /home/walther/esp-idf/components/esp32/include/esp_attr.h \
+ /home/walther/esp-idf/components/xtensa/include/esp_attr.h \
  /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h \
  /home/walther/esp-idf/components/esp_common/include/esp_err.h \
  /home/walther/esp-idf/components/newlib/platform_include/assert.h \
+ /home/walther/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/walther/esp-idf/components/nvs_flash/src/nvs_types.hpp \
+ /home/walther/esp-idf/components/nvs_flash/include/nvs_handle.hpp \
+ /home/walther/esp-idf/components/nvs_flash/include/nvs.h \
  /home/walther/esp-idf/components/nvs_flash/src/compressed_enum_table.hpp \
  /home/walther/esp-idf/components/nvs_flash/src/nvs_page.hpp \
  /home/walther/esp-idf/components/spi_flash/include/esp_spi_flash.h \
@@ -14,7 +17,6 @@ src/nvs_api.o: /home/walther/esp-idf/components/nvs_flash/src/nvs_api.cpp \
  /home/walther/esp-idf/components/nvs_flash/src/nvs_pagemanager.hpp \
  /home/walther/esp-idf/components/nvs_flash/src/nvs_storage.hpp \
  /home/walther/esp-idf/components/nvs_flash/include/nvs_flash.h \
- /home/walther/esp-idf/components/nvs_flash/include/nvs.h \
  /home/walther/esp-idf/components/spi_flash/include/esp_partition.h \
  /home/walther/esp-idf/components/spi_flash/include/esp_flash.h \
  /home/walther/esp-idf/components/soc/include/hal/spi_flash_types.h \
@@ -53,9 +55,10 @@ src/nvs_api.o: /home/walther/esp-idf/components/nvs_flash/src/nvs_api.cpp \
  /home/walther/esp-idf/components/esp_common/include/esp_system.h \
  /home/walther/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/walther/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/walther/esp-idf/components/freertos/include/freertos/queue.h \
+ /home/walther/esp-idf/components/nvs_flash/src/nvs_partition_manager.hpp \
+ /home/walther/esp-idf/components/nvs_flash/src/nvs_handle_simple.hpp \
  /home/walther/esp-idf/components/esp_rom/include/esp32/rom/crc.h \
  /home/walther/esp-idf/components/log/include/esp_log.h \
  /home/walther/esp-idf/components/log/include/esp_log_internal.h
@@ -64,7 +67,7 @@ src/nvs_api.o: /home/walther/esp-idf/components/nvs_flash/src/nvs_api.cpp \
 
 /home/walther/esp-idf/components/nvs_flash/include/nvs.h:
 
-/home/walther/esp-idf/components/esp32/include/esp_attr.h:
+/home/walther/esp-idf/components/xtensa/include/esp_attr.h:
 
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/include/sdkconfig.h:
 
@@ -72,7 +75,13 @@ src/nvs_api.o: /home/walther/esp-idf/components/nvs_flash/src/nvs_api.cpp \
 
 /home/walther/esp-idf/components/newlib/platform_include/assert.h:
 
+/home/walther/esp-idf/components/esp_common/include/esp_compiler.h:
+
 /home/walther/esp-idf/components/nvs_flash/src/nvs_types.hpp:
+
+/home/walther/esp-idf/components/nvs_flash/include/nvs_handle.hpp:
+
+/home/walther/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/walther/esp-idf/components/nvs_flash/src/compressed_enum_table.hpp:
 
@@ -89,8 +98,6 @@ src/nvs_api.o: /home/walther/esp-idf/components/nvs_flash/src/nvs_api.cpp \
 /home/walther/esp-idf/components/nvs_flash/src/nvs_storage.hpp:
 
 /home/walther/esp-idf/components/nvs_flash/include/nvs_flash.h:
-
-/home/walther/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/walther/esp-idf/components/spi_flash/include/esp_partition.h:
 
@@ -168,11 +175,13 @@ src/nvs_api.o: /home/walther/esp-idf/components/nvs_flash/src/nvs_api.cpp \
 
 /home/walther/esp-idf/components/esp_common/include/esp_idf_version.h:
 
-/home/walther/esp-idf/components/xtensa/include/xt_instr_macros.h:
-
 /home/walther/esp-idf/components/freertos/include/freertos/semphr.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/queue.h:
+
+/home/walther/esp-idf/components/nvs_flash/src/nvs_partition_manager.hpp:
+
+/home/walther/esp-idf/components/nvs_flash/src/nvs_handle_simple.hpp:
 
 /home/walther/esp-idf/components/esp_rom/include/esp32/rom/crc.h:
 
