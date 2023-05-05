@@ -1338,7 +1338,7 @@ END GROUP
  *(.jcr)
                 0x000000003fff0034                _data_end = ABSOLUTE (.)
 
-.dram0.rodata   0x000000003fff0034     0x1bf0
+.dram0.rodata   0x000000003fff0034     0x1bf8
                 0x000000003fff0034                _rodata_start = ABSOLUTE (.)
  *(.rodata)
  .rodata        0x000000003fff0034       0x14 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
@@ -1432,62 +1432,63 @@ END GROUP
  .rodata.bootloader_enable_random.str1.1
                 0x000000003fff1781       0x3c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .rodata.bootloader_print_banner.str1.1
-                0x000000003fff17bd       0x7b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x000000003fff17bd       0x81 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .rodata.__assert_func.str1.1
-                0x000000003fff1838       0x37 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x000000003fff183e       0x37 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .rodata.bootloader_fill_random.str1.1
-                0x000000003fff186f       0x5b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x000000003fff1875       0x5b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .rodata.__func__$5186
-                0x000000003fff18ca       0x17 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x000000003fff18d0       0x17 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .rodata.rtc_clk_xtal_freq_estimate.str1.1
-                0x000000003fff18e1       0xe3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x000000003fff18e7       0xe3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ *fill*         0x000000003fff19ca        0x2 
  .rodata.rtc_clk_xtal_freq_estimate
-                0x000000003fff19c4       0x64 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x000000003fff19cc       0x64 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .rodata.rtc_clk_init.str1.1
-                0x000000003fff1a28       0xd9 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x000000003fff1a30       0xd9 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .rodata.rtc_clk_cal_internal.str1.1
-                0x000000003fff1b01       0x9f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x000000003fff1b09       0x9f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
  .rodata.__func__$3908
-                0x000000003fff1ba0       0x15 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x000000003fff1ba8       0x15 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
  .rodata.rtc_clk_cpu_freq_to_pll_mhz.str1.1
-                0x000000003fff1bb5       0x31 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff1bbd       0x31 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.rtc_clk_cpu_freq_get_config.str1.1
-                0x000000003fff1be6       0x3b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff1bee       0x3b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
-                0x000000003fff1c21                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
+                0x000000003fff1c29                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
  *(.xt_except_table)
  *(.gcc_except_table)
  *(.gnu.linkonce.e.*)
  *(.gnu.version_r)
  *(.eh_frame)
-                0x000000003fff1c24                . = ((. + 0x3) & 0xfffffffffffffffc)
- *fill*         0x000000003fff1c21        0x3 
-                0x000000003fff1c24                __init_array_start = ABSOLUTE (.)
+                0x000000003fff1c2c                . = ((. + 0x3) & 0xfffffffffffffffc)
+ *fill*         0x000000003fff1c29        0x3 
+                0x000000003fff1c2c                __init_array_start = ABSOLUTE (.)
  *crtbegin.*(.ctors)
  *(EXCLUDE_FILE(*crtend.*) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
-                0x000000003fff1c24                __init_array_end = ABSOLUTE (.)
+                0x000000003fff1c2c                __init_array_end = ABSOLUTE (.)
  *crtbegin.*(.dtors)
  *(EXCLUDE_FILE(*crtend.*) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x000000003fff1c24                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
+                0x000000003fff1c2c                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
  *(.xt_except_desc)
  *(.gnu.linkonce.h.*)
-                0x000000003fff1c24                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
+                0x000000003fff1c2c                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
  *(.xt_except_desc_end)
  *(.dynamic)
  *(.gnu.version_d)
-                0x000000003fff1c24                _rodata_end = ABSOLUTE (.)
-                0x000000003fff1c24                _lit4_start = ABSOLUTE (.)
+                0x000000003fff1c2c                _rodata_end = ABSOLUTE (.)
+                0x000000003fff1c2c                _lit4_start = ABSOLUTE (.)
  *(*.lit4)
  *(.lit4.*)
  *(.gnu.linkonce.lit4.*)
-                0x000000003fff1c24                _lit4_end = ABSOLUTE (.)
-                0x000000003fff1c24                . = ALIGN (0x4)
-                0x000000003fff1c24                _dram_end = ABSOLUTE (.)
+                0x000000003fff1c2c                _lit4_end = ABSOLUTE (.)
+                0x000000003fff1c2c                . = ALIGN (0x4)
+                0x000000003fff1c2c                _dram_end = ABSOLUTE (.)
                 0x0000000040008550                PROVIDE (ets_update_cpu_frequency = 0x40008550)
                 0x000000004005db1c                PROVIDE (MD5Final = 0x4005db1c)
                 0x000000004005da7c                PROVIDE (MD5Init = 0x4005da7c)
