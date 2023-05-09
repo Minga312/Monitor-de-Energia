@@ -30,15 +30,6 @@ char urlbot_1[255] = "https://api.callmebot.com/whatsapp.php?phone=";
 char urlbot_2[255] = "&text=";
 char urlbot_3[255] = "&apikey=";
 char urlbot_f[1024];
-int dia;
-int mes;
-int ano;
-int hora;
-int minuto;
-int segundo;
-int mes_salvo;
-float valor_salvo;
-int primeira_vez = 1;
 
 const char *ntpServer = "pool.ntp.org";
 const long gmtOffset_sec = 0;
@@ -234,6 +225,9 @@ void printLocalTime()
     time(&now);
     localtime_r(&now, &tempo_atual);
     strftime(strftime_buf, sizeof(strftime_buf), "%A,+%B+%d+%Y+%H:%M:%S", &tempo_atual);
+    tempo_atual.tm_mon += 1;
+    tempo_atual.tm_year += 1900;
+
     // ESP_LOGI(TAG, "The current date/time is: %s", strftime_buf);
 }
 
@@ -271,18 +265,20 @@ void init_wifi(void)
     ESP_LOGI(TAG, "ESP_WIFI_MODE_AP");
     wifi_init_sta();
     obtain_time();
+    printLocalTime();
 }
 
 void monta_e_envia_mensagem()
 {
     xSemaphoreTake(kwh_mutex, portMAX_DELAY);
-    sprintf(whatsapp_messagae, "%02d/%02d/%04d+%02d:%02d:%02d\\n\\n*Monitoramento+de+Energia*\\n\\nTarifa+kWh:+R$+%0.2f\\nConsumido:+%0.2fkWh\\n\\nValor+a+pagar:+R$+%0.2f", dia, mes, ano, hora, minuto, segundo, tarifa, kwatt_hr, precoatual);
+    sprintf(whatsapp_messagae, "%02d/%02d/%04d+%02d:%02d:%02d\\n\\n*Monitoramento+de+Energia*\\n\\nTarifa+kWh:+R$+%0.2f\\nConsumido:+%0.2fkWh\\n\\nValor+a+pagar:+R$+%0.2f",
+            tempo_atual.tm_mday, tempo_atual.tm_mon, tempo_atual.tm_year, tempo_atual.tm_hour, tempo_atual.tm_min, tempo_atual.tm_sec, tarifa, kwatt_hr, precoatual);
     xSemaphoreGive(kwh_mutex);
 
     strcat(urlbot_f, urlbot_1);
     strcat(urlbot_f, numero);
     strcat(urlbot_f, urlbot_2);
-    strcat(urlbot_f,whatsapp_messagae);
+    strcat(urlbot_f, whatsapp_messagae);
     strcat(urlbot_f, urlbot_3);
     strcat(urlbot_f, key);
     printf("%s\n", urlbot_f);

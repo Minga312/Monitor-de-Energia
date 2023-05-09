@@ -35,14 +35,16 @@ CONDITIONS OF ANY KIND, either express or implied.
 
 #define WIFI_DEFAULT "Engenharia"
 #define SENHA_DEFAULT "12345678"
-#define NUMERO_DEFAULT "553191663239"
-#define KEY_DEFAULT "4422757"
+#define NUMERO_DEFAULT "5531916239"
+#define KEY_DEFAULT "442757"
 
 unsigned char naoapagapfvr[255] = "FALOU O MEU AMOR";
 unsigned char dados[255] = "Os dados enviados foram: ";
 char wifi[20], senha[20], numero[20], key[20], stralarme[20], strtarifa[20], strimpostos[20];
 float tarifa, impostos, alarme;
-int32_t inttarifa, intimpostos, intalarme;
+int mes_salvo = 0;
+float valor_salvo = 0;
+int32_t inttarifa, intimpostos, intalarme, int_valor_salvo;
 int idx = 0;
 
 unsigned char tamanho_dados = 25;
@@ -177,6 +179,31 @@ void read_memory()
         impostos = 0;
     }
 
+    err = nvs_get_i32(my_handle, "mes_salvo", &mes_salvo);
+    switch (err)
+    {
+    case ESP_OK:
+        printf("Done\n");
+        printf("mes_salvo value = %d\n", mes_salvo);
+        break;
+    default:
+        printf("Error (%s) reading mes_salvo!\n", esp_err_to_name(err));
+        mes_salvo = 0;
+    }
+
+    err = nvs_get_i32(my_handle, "valor_salvo", &int_valor_salvo);
+    valor_salvo = (float)int_valor_salvo / 1000;
+    switch (err)
+    {
+    case ESP_OK:
+        printf("Done\n");
+        printf("int_valor_salvo value = %d\n", int_valor_salvo);
+        break;
+    default:
+        printf("Error (%s) reading int_valor_salvo!\n", esp_err_to_name(err));
+        valor_salvo = 0;
+    }
+
     err = nvs_get_i32(my_handle, "intalarme", &intalarme);
     alarme = (float)intalarme / 1000;
     switch (err)
@@ -190,6 +217,28 @@ void read_memory()
         intalarme = 20;
     }
 
+    nvs_close(my_handle);
+}
+
+void salva_ultimo_mes()
+{
+    printf("\n");
+    nvs_handle_t my_handle;
+    esp_err_t err = nvs_open("storage", NVS_READWRITE, &my_handle);
+    err = nvs_set_i32(my_handle, "mes_salvo", mes_salvo);
+    err = nvs_commit(my_handle);
+    printf((err != ESP_OK) ? "Failed!\n" : "Done\n");
+    nvs_close(my_handle);
+}
+
+void salva_ultimo_valor()
+{
+    printf("\n");
+    nvs_handle_t my_handle;
+    esp_err_t err = nvs_open("storage", NVS_READWRITE, &my_handle);
+    err = nvs_set_i32(my_handle, "valor_salvo", (int32_t)valor_salvo * 1000);
+    err = nvs_commit(my_handle);
+    printf((err != ESP_OK) ? "Failed!\n" : "Done\n");
     nvs_close(my_handle);
 }
 
