@@ -21,7 +21,6 @@ extern float precoatual;
 
 void app_main()
 {
-
     // Initialize NVS
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND)
@@ -33,6 +32,7 @@ void app_main()
     init_bluetooth();
     init_wifi();
     init_readings();
+
     if (wifi_conectado)
         monta_e_envia_mensagem();
 
@@ -40,7 +40,7 @@ void app_main()
     {
 
         xSemaphoreTake(kwh_mutex, portMAX_DELAY);
-        precoatual = (kwatt_hr - (valor_salvo / tarifa)) * tarifa;
+        precoatual = (kwatt_hr) * tarifa;
         xSemaphoreGive(kwh_mutex);
 
         if (wifi_conectado)
