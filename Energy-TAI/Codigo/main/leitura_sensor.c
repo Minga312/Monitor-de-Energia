@@ -63,7 +63,7 @@ void make_readings()
         kwatt_hr += ((voltage * current * exec_time) / (3600.0 * 1000000000.0));
         printf("KWh: %.8f W\n", kwatt_hr);
         xSemaphoreGive(kwh_mutex);
-        vTaskDelay(50 / portTICK_PERIOD_MS);
+        vTaskDelay(55 / portTICK_PERIOD_MS);
         // 19.22
     }
 }
@@ -72,7 +72,7 @@ void init_readings()
 {
     // Crie o mutex para proteger o acesso à variável result
     kwh_mutex = xSemaphoreCreateMutex();
-    xTaskCreate(make_readings, "make_readings", 4096, NULL, 5, NULL);
+    xTaskCreate(make_readings, "make_readings", 12400, NULL, 5, NULL);
 }
 
 float get_current()

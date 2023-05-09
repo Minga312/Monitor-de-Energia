@@ -28,13 +28,15 @@ CONDITIONS OF ANY KIND, either express or implied.
 
 #define SPP_TAG "SPP_ACCEPTOR_DEMO"
 #define SPP_SERVER_NAME "SPP_SERVER"
-#define EXAMPLE_DEVICE_NAME "MONITOR_ENERGIA"
+#define EXAMPLE_DEVICE_NAME "TESTES"
 #define SPP_SHOW_DATA 0
 #define SPP_SHOW_SPEED 1
 #define SPP_SHOW_MODE SPP_SHOW_DATA /*Choose show mode: show data or speed*/
 
 #define WIFI_DEFAULT "Engenharia"
 #define SENHA_DEFAULT "12345678"
+#define NUMERO_DEFAULT "553191663239"
+#define KEY_DEFAULT "4422757"
 
 unsigned char naoapagapfvr[255] = "FALOU O MEU AMOR";
 unsigned char dados[255] = "Os dados enviados foram: ";
@@ -77,11 +79,6 @@ void read_memory()
             printf("wifi value = %s\n", wifi);
         }
     }
-    else if (err == ESP_ERR_NVS_NOT_FOUND)
-    {
-        printf("The value is not initialized yet!\n");
-        strcpy(wifi, WIFI_DEFAULT);
-    }
     else
     {
         printf("Error (%s) reading!\n", esp_err_to_name(err));
@@ -103,11 +100,6 @@ void read_memory()
             printf("Done\n");
             printf("senha value = %s\n", senha);
         }
-    }
-    else if (err == ESP_ERR_NVS_NOT_FOUND)
-    {
-        printf("The value is not initialized yet!\n");
-        strcpy(senha, SENHA_DEFAULT);
     }
     else
     {
@@ -131,13 +123,10 @@ void read_memory()
             printf("numero value = %s\n", numero);
         }
     }
-    else if (err == ESP_ERR_NVS_NOT_FOUND)
-    {
-        printf("The value is not initialized yet!\n");
-    }
     else
     {
         printf("Error (%s) reading!\n", esp_err_to_name(err));
+        strcpy(numero, NUMERO_DEFAULT);
     }
 
     required_size = 0;
@@ -156,13 +145,10 @@ void read_memory()
             printf("key value = %s\n", key);
         }
     }
-    else if (err == ESP_ERR_NVS_NOT_FOUND)
-    {
-        printf("The value is not initialized yet!\n");
-    }
     else
     {
         printf("Error (%s) reading!\n", esp_err_to_name(err));
+        strcpy(key, KEY_DEFAULT);
     }
 
     err = nvs_get_i32(my_handle, "inttarifa", &inttarifa);
@@ -173,11 +159,9 @@ void read_memory()
         printf("Done\n");
         printf("inttarifa value = %d\n", inttarifa);
         break;
-    case ESP_ERR_NVS_NOT_FOUND:
-        printf("The value is not initialized yet!\n");
-        break;
     default:
         printf("Error (%s) reading inttarifa!\n", esp_err_to_name(err));
+        tarifa = 1;
     }
 
     err = nvs_get_i32(my_handle, "intimpostos", &intimpostos);
@@ -188,11 +172,9 @@ void read_memory()
         printf("Done\n");
         printf("intimpostos value = %d\n", intimpostos);
         break;
-    case ESP_ERR_NVS_NOT_FOUND:
-        printf("The value is not initialized yet!\n");
-        break;
     default:
         printf("Error (%s) reading intimpostos!\n", esp_err_to_name(err));
+        impostos = 0;
     }
 
     err = nvs_get_i32(my_handle, "intalarme", &intalarme);
@@ -203,11 +185,9 @@ void read_memory()
         printf("Done\n");
         printf("intalarme value = %d\n", intalarme);
         break;
-    case ESP_ERR_NVS_NOT_FOUND:
-        printf("The value is not initialized yet!\n");
-        break;
     default:
         printf("Error (%s) reading intalarme!\n", esp_err_to_name(err));
+        intalarme = 20;
     }
 
     nvs_close(my_handle);

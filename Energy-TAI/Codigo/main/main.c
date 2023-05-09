@@ -12,7 +12,7 @@ extern int mes_salvo;
 extern float valor_salvo;
 extern struct tm tempo_atual;
 extern float alarme;
-float precoatual;
+float precoatual = 0;
 
 void app_main()
 {
@@ -27,7 +27,7 @@ void app_main()
     init_bluetooth();
     init_wifi();
     init_readings();
-    // monta_e_envia_mensagem();
+    monta_e_envia_mensagem();
 
     while (1)
     {

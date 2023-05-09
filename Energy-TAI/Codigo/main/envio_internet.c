@@ -29,7 +29,7 @@ char whatsapp_messagae[255];
 char urlbot_1[255] = "https://api.callmebot.com/whatsapp.php?phone=";
 char urlbot_2[255] = "&text=";
 char urlbot_3[255] = "&apikey=";
-char urlbot_f[255];
+char urlbot_f[1024];
 int dia;
 int mes;
 int ano;
@@ -234,7 +234,7 @@ void printLocalTime()
     time(&now);
     localtime_r(&now, &tempo_atual);
     strftime(strftime_buf, sizeof(strftime_buf), "%A,+%B+%d+%Y+%H:%M:%S", &tempo_atual);
-   // ESP_LOGI(TAG, "The current date/time is: %s", strftime_buf);
+    // ESP_LOGI(TAG, "The current date/time is: %s", strftime_buf);
 }
 
 void initialize_sntp(void)
@@ -282,7 +282,7 @@ void monta_e_envia_mensagem()
     strcat(urlbot_f, urlbot_1);
     strcat(urlbot_f, numero);
     strcat(urlbot_f, urlbot_2);
-    strcat(urlbot_f, whatsapp_messagae);
+    strcat(urlbot_f, "oi+teste");
     strcat(urlbot_f, urlbot_3);
     strcat(urlbot_f, key);
     printf("%s\n", urlbot_f);
