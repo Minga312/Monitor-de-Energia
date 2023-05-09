@@ -107,6 +107,8 @@ host/bluedroid/stack/smp/smp_utils.o: \
  /home/walther/esp-idf/components/bt/host/bluedroid/device/include/device/version.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/rfcdefs.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bte_appl.h
 
 /home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h:
@@ -322,6 +324,10 @@ host/bluedroid/stack/smp/smp_utils.o: \
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/rfcdefs.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bte_appl.h:
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/smp/smp_utils.c:

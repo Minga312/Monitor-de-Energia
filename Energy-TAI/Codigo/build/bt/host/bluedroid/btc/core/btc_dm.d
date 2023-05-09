@@ -104,6 +104,8 @@ host/bluedroid/btc/core/btc_dm.o: \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/rfcdefs.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/list.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h \
@@ -319,6 +321,10 @@ host/bluedroid/btc/core/btc_dm.o: \
 /home/walther/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h:
 
 /home/walther/esp-idf/components/bt/common/osi/include/osi/list.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h:
 

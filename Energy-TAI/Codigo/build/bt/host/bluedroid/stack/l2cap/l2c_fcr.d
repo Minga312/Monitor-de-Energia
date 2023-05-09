@@ -90,9 +90,13 @@ host/bluedroid/stack/l2cap/l2c_fcr.o: \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/rfcdefs.h \
- /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btu.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/thread.h \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btu.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/allocator.h
 
 /home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h:
@@ -275,11 +279,19 @@ host/bluedroid/stack/l2cap/l2c_fcr.o: \
 
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/rfcdefs.h:
 
-/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btu.h:
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h:
 
 /home/walther/esp-idf/components/bt/common/osi/include/osi/thread.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btu.h:
 
 /home/walther/esp-idf/components/bt/common/osi/include/osi/allocator.h:
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/l2cap/l2c_fcr.c:

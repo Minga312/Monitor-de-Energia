@@ -88,7 +88,13 @@ host/bluedroid/main/bte_init.o: \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2cdefs.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/list.h \
- /home/walther/esp-idf/components/bt/common/osi/include/osi/semaphore.h
+ /home/walther/esp-idf/components/bt/common/osi/include/osi/semaphore.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h \
+ /home/walther/esp-idf/components/bt/common/osi/include/osi/thread.h \
+ /home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h
 
 /home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h:
 
@@ -267,4 +273,16 @@ host/bluedroid/main/bte_init.o: \
 /home/walther/esp-idf/components/bt/common/osi/include/osi/list.h:
 
 /home/walther/esp-idf/components/bt/common/osi/include/osi/semaphore.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h:
+
+/home/walther/esp-idf/components/bt/common/osi/include/osi/thread.h:
+
+/home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 /home/walther/esp-idf/components/bt/host/bluedroid/main/bte_init.c:

@@ -103,6 +103,9 @@ host/bluedroid/bta/hf_ag/bta_ag_act.o: \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/list.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_sdp_api.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/bt_sdp.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h \
@@ -313,6 +316,12 @@ host/bluedroid/bta/hf_ag/bta_ag_act.o: \
 /home/walther/esp-idf/components/bt/common/osi/include/osi/list.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_sdp_api.h:
 

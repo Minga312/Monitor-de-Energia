@@ -86,9 +86,13 @@ host/bluedroid/stack/btm/btm_devctl.o: \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/list.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/semaphore.h \
- /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btu.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/thread.h \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btu.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/hash_map.h \
@@ -104,7 +108,10 @@ host/bluedroid/stack/btm/btm_devctl.o: \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/l2cap/include/l2c_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h \
- /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2cdefs.h
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2cdefs.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/gatt/include/gatt_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h
 
 /home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h:
 
@@ -278,11 +285,19 @@ host/bluedroid/stack/btm/btm_devctl.o: \
 
 /home/walther/esp-idf/components/bt/common/osi/include/osi/semaphore.h:
 
-/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btu.h:
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h:
 
 /home/walther/esp-idf/components/bt/common/osi/include/osi/thread.h:
 
 /home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btu.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h:
 
@@ -315,4 +330,10 @@ host/bluedroid/stack/btm/btm_devctl.o: \
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2cdefs.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/gatt/include/gatt_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h:
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/btm_devctl.c:

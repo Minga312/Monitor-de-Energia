@@ -34,8 +34,6 @@ Archive member included to satisfy reference by file (symbol)
                               /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o) (esp_cpu_in_ocd_debug_mode)
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                               /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (rtc_wdt_protect_off)
-/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
-                              /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o) (rtc_vddsdio_get_config)
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                               /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o) (rtc_clk_init)
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(gpio_periph.o)
@@ -93,8 +91,8 @@ Discarded input sections
                 0x0000000000000000       0x67 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
  .text.bootloader_common_get_partition_description
                 0x0000000000000000       0x7b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .xt.lit        0x0000000000000000       0x58 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .xt.prop       0x0000000000000000      0x498 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .xt.lit        0x0000000000000000       0x50 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .xt.prop       0x0000000000000000      0x480 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
  .text          0x0000000000000000        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .data          0x0000000000000000        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .bss           0x0000000000000000        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
@@ -308,15 +306,6 @@ Discarded input sections
                 0x0000000000000000       0x1a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .xt.lit        0x0000000000000000       0x60 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .xt.prop       0x0000000000000000      0x384 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .literal.rtc_init
-                0x0000000000000000       0xbc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .text          0x0000000000000000        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .data          0x0000000000000000        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .bss           0x0000000000000000        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .text.rtc_init
-                0x0000000000000000      0x342 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .xt.lit        0x0000000000000000       0x18 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .xt.prop       0x0000000000000000       0xfc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
  .text          0x0000000000000000        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .data          0x0000000000000000        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .bss           0x0000000000000000        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
@@ -440,7 +429,7 @@ LOAD /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp
 END GROUP
 
 .iram_loader.text
-                0x0000000040078000     0x3996
+                0x0000000040078000     0x396e
                 0x0000000040078000                . = ALIGN (0x10)
                 0x0000000040078000                _loader_text_start = ABSOLUTE (.)
  *(.stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
@@ -488,9 +477,6 @@ END GROUP
  .literal.bootloader_common_get_active_otadata
                 0x0000000040078100        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                           0xc (size before relaxing)
- .literal.bootloader_common_vddsdio_configure
-                0x0000000040078100        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                                         0x10 (size before relaxing)
  .literal.bootloader_common_check_chip_validity
                 0x0000000040078100       0x18 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x34 (size before relaxing)
@@ -542,589 +528,587 @@ END GROUP
                 0x0000000040078264        0x4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x14 (size before relaxing)
  .literal.bootloader_utility_load_partition_table
-                0x0000000040078268       0x48 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078268       0x4c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x90 (size before relaxing)
  .literal.bootloader_utility_get_selected_boot_partition
-                0x00000000400782b0       0x20 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400782b4       0x20 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x70 (size before relaxing)
  .literal.bootloader_reset
-                0x00000000400782d0        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400782d4        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x14 (size before relaxing)
  .literal.bootloader_utility_load_boot_image
-                0x00000000400782d8        0xc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400782dc        0xc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x5c (size before relaxing)
  .literal.bootloader_sha256_start
-                0x00000000400782e4        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x00000000400782e8        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .literal.bootloader_sha256_data
-                0x00000000400782ec       0x20 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x00000000400782f0       0x20 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0x2c (size before relaxing)
  .literal.bootloader_sha256_finish
-                0x000000004007830c       0x14 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040078310       0x14 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0x3c (size before relaxing)
  .literal.bootloader_util_regions_overlap
-                0x0000000040078320       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078324       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x14 (size before relaxing)
  .literal.verify_load_addresses
-                0x0000000040078330       0x78 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078334       0x78 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x9c (size before relaxing)
  .literal.should_load
-                0x00000000400783a8        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400783ac        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x28 (size before relaxing)
  .literal.image_load
-                0x00000000400783a8       0x5c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400783ac       0x5c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x164 (size before relaxing)
  .literal.bootloader_load_image
-                0x0000000040078404        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078408        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                           0x4 (size before relaxing)
  .literal.esp_partition_table_verify
-                0x0000000040078404       0x2c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x0000000040078408       0x2c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                          0x58 (size before relaxing)
  .literal.esp_rom_spiflash_read_status
-                0x0000000040078430        0xc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078434        0xc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_wait_idle
-                0x000000004007843c        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078440        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                           0xc (size before relaxing)
  .literal.esp_rom_spiflash_enable_write$constprop$7
-                0x0000000040078444        0x4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078448        0x4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_program_page_internal$constprop$5
-                0x0000000040078448        0xc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007844c        0xc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x24 (size before relaxing)
  .literal.esp_rom_spiflash_erase_sector
-                0x0000000040078454        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078458        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x34 (size before relaxing)
  .literal.esp_rom_spiflash_write
-                0x000000004007845c        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078460        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x24 (size before relaxing)
  .literal.esp_rom_spiflash_write_encrypted
-                0x000000004007845c        0xc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078460        0xc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x10 (size before relaxing)
  .literal.esp_rom_spiflash_read
-                0x0000000040078468       0x30 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007846c       0x30 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x70 (size before relaxing)
  .literal.rtc_wdt_protect_off
-                0x0000000040078498        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007849c        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .literal.rtc_wdt_protect_on
-                0x00000000400784a0        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x00000000400784a4        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                           0x4 (size before relaxing)
  .literal.rtc_wdt_enable
-                0x00000000400784a0        0xc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x00000000400784a4        0xc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x10 (size before relaxing)
  .literal.rtc_wdt_set_time
-                0x00000000400784ac       0x18 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x00000000400784b0       0x18 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x20 (size before relaxing)
  .literal.rtc_wdt_set_stage
-                0x00000000400784c4       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x00000000400784c8       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x14 (size before relaxing)
  .literal.rtc_wdt_disable
-                0x00000000400784d4        0x4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x00000000400784d8        0x4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x28 (size before relaxing)
  .literal.rtc_wdt_set_length_of_reset_signal
-                0x00000000400784d8        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x00000000400784dc        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_bbpll_disable
-                0x00000000400784e0        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400784e4        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x10 (size before relaxing)
  .literal.rtc_clk_cpu_freq_to_pll_mhz
-                0x00000000400784e8       0x20 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400784ec       0x20 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x40 (size before relaxing)
  .literal.rtc_clk_32k_enable_common$constprop$4
-                0x0000000040078508       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007850c       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x14 (size before relaxing)
  .literal.rtc_clk_32k_enable
-                0x0000000040078518        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007851c        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x10 (size before relaxing)
  .literal.rtc_clk_8m_enable
-                0x0000000040078520        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078524        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x10 (size before relaxing)
  .literal.rtc_clk_8m_enabled
-                0x0000000040078528        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007852c        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_8md256_enabled
-                0x0000000040078528        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007852c        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_slow_freq_set
-                0x0000000040078528        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007852c        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_slow_freq_get
-                0x0000000040078528        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007852c        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_slow_freq_get_hz
-                0x0000000040078528        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007852c        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x10 (size before relaxing)
  .literal.rtc_clk_fast_freq_set
-                0x0000000040078530        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078534        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x10 (size before relaxing)
  .literal.rtc_clk_fast_freq_get
-                0x0000000040078530        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078534        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_bbpll_configure
-                0x0000000040078530        0x4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078534        0x4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x38 (size before relaxing)
  .literal.rtc_clk_xtal_freq_get
-                0x0000000040078534        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078538        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_mhz_to_config
-                0x000000004007853c        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078540        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_cpu_freq_get_config
-                0x000000004007853c        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078540        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x24 (size before relaxing)
  .literal.rtc_clk_xtal_freq_update
-                0x0000000040078544        0x4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078548        0x4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x8 (size before relaxing)
  .literal.rtc_clk_apb_freq_update
-                0x0000000040078548        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007854c        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_cpu_freq_to_xtal
-                0x0000000040078548        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007854c        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x2c (size before relaxing)
  .literal.rtc_clk_cpu_freq_set_config
-                0x0000000040078550        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078554        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x68 (size before relaxing)
  .literal.rtc_clk_apb_freq_get
-                0x0000000040078558        0xc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007855c        0xc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x14 (size before relaxing)
- .iram1.11      0x0000000040078564      0x1f3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- *fill*         0x0000000040078757        0x1 
- .iram1.12      0x0000000040078758       0x20 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040078758                bootloader_execute_flash_command
- .iram1.10      0x0000000040078778      0x122 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .iram1.11      0x0000000040078568      0x1f3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ *fill*         0x000000004007875b        0x1 
+ .iram1.12      0x000000004007875c       0x20 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x000000004007875c                bootloader_execute_flash_command
+ .iram1.10      0x000000004007877c      0x122 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                         0x146 (size before relaxing)
-                0x0000000040078778                bootloader_flash_unlock
- *fill*         0x000000004007889a        0x2 
- .iram1.13      0x000000004007889c       0x32 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x000000004007877c                bootloader_flash_unlock
+ *fill*         0x000000004007889e        0x2 
+ .iram1.13      0x00000000400788a0       0x32 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x36 (size before relaxing)
-                0x000000004007889c                bootloader_flash_read_sfdp
- *fill*         0x00000000400788ce        0x2 
- .iram1.14      0x00000000400788d0       0x2a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400788a0                bootloader_flash_read_sfdp
+ *fill*         0x00000000400788d2        0x2 
+ .iram1.14      0x00000000400788d4       0x2a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x2e (size before relaxing)
-                0x00000000400788d0                bootloader_read_flash_id
- *fill*         0x00000000400788fa        0x2 
- .iram1.16      0x00000000400788fc       0x99 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400788d4                bootloader_read_flash_id
+ *fill*         0x00000000400788fe        0x2 
+ .iram1.16      0x0000000040078900       0x99 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0xb5 (size before relaxing)
-                0x00000000400788fc                bootloader_flash_xmc_startup
- *fill*         0x0000000040078995        0x3 
- .iram1.0       0x0000000040078998       0x6e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
-                0x0000000040078998                bootloader_flash_cs_timing_config
- *fill*         0x0000000040078a06        0x2 
- .iram1.2       0x0000000040078a08      0x1da /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
-                0x0000000040078a08                bootloader_flash_gpio_config
- *fill*         0x0000000040078be2        0x2 
- .iram1.3       0x0000000040078be4       0x92 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
-                0x0000000040078be4                bootloader_flash_dummy_config
- *fill*         0x0000000040078c76        0x2 
- .iram1.3       0x0000000040078c78        0xe /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
-                0x0000000040078c78                esp_cpu_in_ocd_debug_mode
- *fill*         0x0000000040078c86        0x2 
- .iram1.15      0x0000000040078c88       0x46 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- *fill*         0x0000000040078cce        0x0 
- *fill*         0x0000000040078cce        0x0 
- *fill*         0x0000000040078cce        0x0 
- *fill*         0x0000000040078cce        0x0 
- *fill*         0x0000000040078cce        0x0 
- *fill*         0x0000000040078cce        0x0 
- *fill*         0x0000000040078cce        0x0 
- *fill*         0x0000000040078cce        0x0 
- *fill*         0x0000000040078cce        0x0 
+                0x0000000040078900                bootloader_flash_xmc_startup
+ *fill*         0x0000000040078999        0x3 
+ .iram1.0       0x000000004007899c       0x6e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+                0x000000004007899c                bootloader_flash_cs_timing_config
+ *fill*         0x0000000040078a0a        0x2 
+ .iram1.2       0x0000000040078a0c      0x1da /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+                0x0000000040078a0c                bootloader_flash_gpio_config
+ *fill*         0x0000000040078be6        0x2 
+ .iram1.3       0x0000000040078be8       0x92 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+                0x0000000040078be8                bootloader_flash_dummy_config
+ *fill*         0x0000000040078c7a        0x2 
+ .iram1.3       0x0000000040078c7c        0xe /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
+                0x0000000040078c7c                esp_cpu_in_ocd_debug_mode
+ *fill*         0x0000000040078c8a        0x2 
+ .iram1.15      0x0000000040078c8c       0x46 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ *fill*         0x0000000040078cd2        0x0 
+ *fill*         0x0000000040078cd2        0x0 
+ *fill*         0x0000000040078cd2        0x0 
+ *fill*         0x0000000040078cd2        0x0 
+ *fill*         0x0000000040078cd2        0x0 
+ *fill*         0x0000000040078cd2        0x0 
+ *fill*         0x0000000040078cd2        0x0 
+ *fill*         0x0000000040078cd2        0x0 
+ *fill*         0x0000000040078cd2        0x0 
  *liblog.a:(.literal .text .literal.* .text.*)
- *fill*         0x0000000040078cce        0x2 
+ *fill*         0x0000000040078cd2        0x2 
  .text.esp_log_early_timestamp
-                0x0000000040078cd0       0x1e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/log/liblog.a(log_noos.o)
-                0x0000000040078cd0                esp_log_timestamp
-                0x0000000040078cd0                esp_log_early_timestamp
- *fill*         0x0000000040078cee        0x0 
+                0x0000000040078cd4       0x1e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/log/liblog.a(log_noos.o)
+                0x0000000040078cd4                esp_log_timestamp
+                0x0000000040078cd4                esp_log_early_timestamp
+ *fill*         0x0000000040078cf2        0x0 
  *libgcc.a:(.literal .text .literal.* .text.*)
- *fill*         0x0000000040078cee        0x2 
- .text          0x0000000040078cf0       0x26 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
-                0x0000000040078cf0                __bswapsi2
- *fill*         0x0000000040078d16        0x0 
- *fill*         0x0000000040078d16        0x2 
- .text          0x0000000040078d18      0x26e /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
-                0x0000000040078d18                __udivdi3
+ *fill*         0x0000000040078cf2        0x2 
+ .text          0x0000000040078cf4       0x26 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
+                0x0000000040078cf4                __bswapsi2
+ *fill*         0x0000000040078d1a        0x0 
+ *fill*         0x0000000040078d1a        0x2 
+ .text          0x0000000040078d1c      0x26e /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
+                0x0000000040078d1c                __udivdi3
  *libbootloader_support.a:bootloader_clock.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040078f86        0x2 
+ *fill*         0x0000000040078f8a        0x2 
  .text.bootloader_clock_configure
-                0x0000000040078f88       0x86 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+                0x0000000040078f8c       0x86 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
                                          0x92 (size before relaxing)
-                0x0000000040078f88                bootloader_clock_configure
- *fill*         0x000000004007900e        0x0 
+                0x0000000040078f8c                bootloader_clock_configure
+ *fill*         0x0000000040079012        0x0 
  *libbootloader_support.a:bootloader_common.*(.literal .text .literal.* .text.*)
- *fill*         0x000000004007900e        0x2 
+ *fill*         0x0000000040079012        0x2 
  .text.bootloader_common_ota_select_crc
-                0x0000000040079010       0x14 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                0x0000000040079010                bootloader_common_ota_select_crc
+                0x0000000040079014       0x14 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040079014                bootloader_common_ota_select_crc
  .text.bootloader_common_ota_select_valid
-                0x0000000040079024       0x22 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040079028       0x22 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x26 (size before relaxing)
-                0x0000000040079024                bootloader_common_ota_select_valid
- *fill*         0x0000000040079046        0x2 
+                0x0000000040079028                bootloader_common_ota_select_valid
+ *fill*         0x000000004007904a        0x2 
  .text.bootloader_common_get_active_otadata
-                0x0000000040079048       0x28 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x000000004007904c       0x28 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x30 (size before relaxing)
-                0x0000000040079048                bootloader_common_get_active_otadata
- .text.bootloader_common_vddsdio_configure
-                0x0000000040079070       0x33 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                                         0x3a (size before relaxing)
-                0x0000000040079070                bootloader_common_vddsdio_configure
- *fill*         0x00000000400790a3        0x1 
+                0x000000004007904c                bootloader_common_get_active_otadata
  .text.bootloader_common_check_chip_validity
-                0x00000000400790a4       0x80 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040079074       0x80 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x8f (size before relaxing)
-                0x00000000400790a4                bootloader_common_check_chip_validity
- *fill*         0x0000000040079124        0x0 
+                0x0000000040079074                bootloader_common_check_chip_validity
+ *fill*         0x00000000400790f4        0x0 
  .text.bootloader_common_get_reset_reason
-                0x0000000040079124       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                0x0000000040079124                bootloader_common_get_reset_reason
- *fill*         0x0000000040079134        0x0 
+                0x00000000400790f4       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x00000000400790f4                bootloader_common_get_reset_reason
+ *fill*         0x0000000040079104        0x0 
  .text.bootloader_common_ota_select_invalid
-                0x0000000040079134       0x19 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                0x0000000040079134                bootloader_common_ota_select_invalid
- *fill*         0x000000004007914d        0x0 
- *fill*         0x000000004007914d        0x3 
+                0x0000000040079104       0x19 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040079104                bootloader_common_ota_select_invalid
+ *fill*         0x000000004007911d        0x0 
+ *fill*         0x000000004007911d        0x3 
  .text.bootloader_common_select_otadata
-                0x0000000040079150       0x4d /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                0x0000000040079150                bootloader_common_select_otadata
- *fill*         0x000000004007919d        0x0 
- *fill*         0x000000004007919d        0x0 
- *fill*         0x000000004007919d        0x0 
+                0x0000000040079120       0x4d /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040079120                bootloader_common_select_otadata
+ *fill*         0x000000004007916d        0x3 
+ .text.bootloader_common_vddsdio_configure
+                0x0000000040079170        0x5 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040079170                bootloader_common_vddsdio_configure
+ *fill*         0x0000000040079175        0x0 
+ *fill*         0x0000000040079175        0x0 
  *libbootloader_support.a:bootloader_flash.*(.literal .text .literal.* .text.*)
- *fill*         0x000000004007919d        0x3 
+ *fill*         0x0000000040079175        0x3 
  .text.bootloader_mmap
-                0x00000000400791a0       0xa9 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040079178       0xa9 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0xad (size before relaxing)
-                0x00000000400791a0                bootloader_mmap
- *fill*         0x0000000040079249        0x3 
+                0x0000000040079178                bootloader_mmap
+ *fill*         0x0000000040079221        0x3 
  .text.bootloader_munmap
-                0x000000004007924c       0x32 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x000000004007924c                bootloader_munmap
- *fill*         0x000000004007927e        0x2 
+                0x0000000040079224       0x32 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040079224                bootloader_munmap
+ *fill*         0x0000000040079256        0x2 
  .text.bootloader_flash_read
-                0x0000000040079280      0x11a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040079258      0x11a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                         0x11e (size before relaxing)
-                0x0000000040079280                bootloader_flash_read
- *fill*         0x000000004007939a        0x2 
+                0x0000000040079258                bootloader_flash_read
+ *fill*         0x0000000040079372        0x2 
  .text.bootloader_flash_erase_sector
-                0x000000004007939c       0x1a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040079374       0x1a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x1e (size before relaxing)
-                0x000000004007939c                bootloader_flash_erase_sector
- *fill*         0x00000000400793b6        0x2 
+                0x0000000040079374                bootloader_flash_erase_sector
+ *fill*         0x000000004007938e        0x2 
  .text.bootloader_flash_write
-                0x00000000400793b8       0x97 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040079390       0x97 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x9e (size before relaxing)
-                0x00000000400793b8                bootloader_flash_write
- *fill*         0x000000004007944f        0x1 
+                0x0000000040079390                bootloader_flash_write
+ *fill*         0x0000000040079427        0x1 
  .text.bootloader_enable_wp
-                0x0000000040079450       0x13 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040079450                bootloader_enable_wp
- *fill*         0x0000000040079463        0x1 
+                0x0000000040079428       0x13 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040079428                bootloader_enable_wp
+ *fill*         0x000000004007943b        0x1 
  .text.bootloader_mmap_get_free_pages
-                0x0000000040079464        0x7 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040079464                bootloader_mmap_get_free_pages
- *fill*         0x000000004007946b        0x0 
- *fill*         0x000000004007946b        0x0 
- *fill*         0x000000004007946b        0x0 
- *fill*         0x000000004007946b        0x0 
- *fill*         0x000000004007946b        0x0 
- *fill*         0x000000004007946b        0x0 
+                0x000000004007943c        0x7 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x000000004007943c                bootloader_mmap_get_free_pages
+ *fill*         0x0000000040079443        0x0 
+ *fill*         0x0000000040079443        0x0 
+ *fill*         0x0000000040079443        0x0 
+ *fill*         0x0000000040079443        0x0 
+ *fill*         0x0000000040079443        0x0 
+ *fill*         0x0000000040079443        0x0 
  *libbootloader_support.a:bootloader_random.*(.literal .text .literal.* .text.*)
- *fill*         0x000000004007946b        0x1 
+ *fill*         0x0000000040079443        0x1 
  .text.bootloader_fill_random
-                0x000000004007946c       0x5b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x000000004007946c                bootloader_fill_random
- *fill*         0x00000000400794c7        0x1 
+                0x0000000040079444       0x5b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040079444                bootloader_fill_random
+ *fill*         0x000000004007949f        0x1 
  .text.bootloader_random_enable
-                0x00000000400794c8      0x1d5 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x00000000400794c8                bootloader_random_enable
- *fill*         0x000000004007969d        0x3 
+                0x00000000400794a0      0x1d5 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x00000000400794a0                bootloader_random_enable
+ *fill*         0x0000000040079675        0x3 
  .text.bootloader_random_disable
-                0x00000000400796a0      0x13a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x00000000400796a0                bootloader_random_disable
- *fill*         0x00000000400797da        0x0 
- *fill*         0x00000000400797da        0x0 
- *fill*         0x00000000400797da        0x0 
+                0x0000000040079678      0x13a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040079678                bootloader_random_disable
+ *fill*         0x00000000400797b2        0x0 
+ *fill*         0x00000000400797b2        0x0 
+ *fill*         0x00000000400797b2        0x0 
  *libbootloader_support.a:bootloader_efuse_esp32.*(.literal .text .literal.* .text.*)
- *fill*         0x00000000400797da        0x2 
+ *fill*         0x00000000400797b2        0x2 
  .text.bootloader_common_get_chip_revision
-                0x00000000400797dc       0x42 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
-                0x00000000400797dc                bootloader_common_get_chip_revision
- *fill*         0x000000004007981e        0x2 
+                0x00000000400797b4       0x42 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+                0x00000000400797b4                bootloader_common_get_chip_revision
+ *fill*         0x00000000400797f6        0x2 
  .text.bootloader_clock_get_rated_freq_mhz
-                0x0000000040079820       0x22 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
-                0x0000000040079820                bootloader_clock_get_rated_freq_mhz
- *fill*         0x0000000040079842        0x0 
- *fill*         0x0000000040079842        0x0 
+                0x00000000400797f8       0x22 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+                0x00000000400797f8                bootloader_clock_get_rated_freq_mhz
+ *fill*         0x000000004007981a        0x0 
+ *fill*         0x000000004007981a        0x0 
  *libbootloader_support.a:bootloader_utility.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040079842        0x2 
+ *fill*         0x000000004007981a        0x2 
  .text.load_image
-                0x0000000040079844      0x177 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000004007981c      0x177 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x183 (size before relaxing)
- *fill*         0x00000000400799bb        0x1 
+ *fill*         0x0000000040079993        0x1 
  .text.log_invalid_app_partition
-                0x00000000400799bc       0x53 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079994       0x53 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x5b (size before relaxing)
- *fill*         0x0000000040079a0f        0x1 
+ *fill*         0x00000000400799e7        0x1 
  .text.set_actual_ota_seq$isra$3$part$4
-                0x0000000040079a10       0x87 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400799e8       0x87 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x97 (size before relaxing)
- *fill*         0x0000000040079a97        0x1 
+ *fill*         0x0000000040079a6f        0x1 
  .text.try_load_partition
-                0x0000000040079a98       0x2f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079a70       0x2f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x33 (size before relaxing)
- *fill*         0x0000000040079ac7        0x1 
+ *fill*         0x0000000040079a9f        0x1 
  .text.bootloader_utility_load_partition_table
-                0x0000000040079ac8      0x174 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079aa0      0x174 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x188 (size before relaxing)
-                0x0000000040079ac8                bootloader_utility_load_partition_table
+                0x0000000040079aa0                bootloader_utility_load_partition_table
  .text.bootloader_utility_get_selected_boot_partition
-                0x0000000040079c3c      0x130 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079c14      0x130 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x153 (size before relaxing)
-                0x0000000040079c3c                bootloader_utility_get_selected_boot_partition
- *fill*         0x0000000040079d6c        0x0 
+                0x0000000040079c14                bootloader_utility_get_selected_boot_partition
+ *fill*         0x0000000040079d44        0x0 
  .text.bootloader_reset
-                0x0000000040079d6c       0x2b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
-                0x0000000040079d6c                bootloader_reset
- *fill*         0x0000000040079d97        0x1 
+                0x0000000040079d44       0x2b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079d44                bootloader_reset
+ *fill*         0x0000000040079d6f        0x1 
  .text.bootloader_utility_load_boot_image
-                0x0000000040079d98      0x104 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079d70      0x104 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x120 (size before relaxing)
-                0x0000000040079d98                bootloader_utility_load_boot_image
- *fill*         0x0000000040079e9c        0x0 
- *fill*         0x0000000040079e9c        0x0 
+                0x0000000040079d70                bootloader_utility_load_boot_image
+ *fill*         0x0000000040079e74        0x0 
+ *fill*         0x0000000040079e74        0x0 
  .text.index_to_partition
-                0x0000000040079e9c       0x40 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- *fill*         0x0000000040079edc        0x0 
- *fill*         0x0000000040079edc        0x0 
- *fill*         0x0000000040079edc        0x0 
- *fill*         0x0000000040079edc        0x0 
- *fill*         0x0000000040079edc        0x0 
+                0x0000000040079e74       0x40 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ *fill*         0x0000000040079eb4        0x0 
+ *fill*         0x0000000040079eb4        0x0 
+ *fill*         0x0000000040079eb4        0x0 
+ *fill*         0x0000000040079eb4        0x0 
+ *fill*         0x0000000040079eb4        0x0 
  .text.bootloader_debug_buffer
-                0x0000000040079edc        0x5 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
-                0x0000000040079edc                bootloader_debug_buffer
+                0x0000000040079eb4        0x5 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079eb4                bootloader_debug_buffer
  *libbootloader_support.a:bootloader_sha.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040079ee1        0x3 
+ *fill*         0x0000000040079eb9        0x3 
  .text.bootloader_sha256_start
-                0x0000000040079ee4       0x12 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
-                0x0000000040079ee4                bootloader_sha256_start
- *fill*         0x0000000040079ef6        0x2 
+                0x0000000040079ebc       0x12 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040079ebc                bootloader_sha256_start
+ *fill*         0x0000000040079ece        0x2 
  .text.bootloader_sha256_data
-                0x0000000040079ef8       0xa3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040079ed0       0xa3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0xa7 (size before relaxing)
-                0x0000000040079ef8                bootloader_sha256_data
- *fill*         0x0000000040079f9b        0x1 
+                0x0000000040079ed0                bootloader_sha256_data
+ *fill*         0x0000000040079f73        0x1 
  .text.bootloader_sha256_finish
-                0x0000000040079f9c       0xb8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040079f74       0xb8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0xc0 (size before relaxing)
-                0x0000000040079f9c                bootloader_sha256_finish
- *fill*         0x000000004007a054        0x0 
- *fill*         0x000000004007a054        0x0 
- *fill*         0x000000004007a054        0x0 
+                0x0000000040079f74                bootloader_sha256_finish
+ *fill*         0x000000004007a02c        0x0 
+ *fill*         0x000000004007a02c        0x0 
+ *fill*         0x000000004007a02c        0x0 
  *libbootloader_support.a:esp_image_format.*(.literal .text .literal.* .text.*)
  .text.bootloader_util_regions_overlap
-                0x000000004007a054       0x38 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007a02c       0x38 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x3c (size before relaxing)
  .text.verify_load_addresses
-                0x000000004007a08c      0x163 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007a064      0x163 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x177 (size before relaxing)
- *fill*         0x000000004007a1ef        0x1 
+ *fill*         0x000000004007a1c7        0x1 
  .text.should_load
-                0x000000004007a1f0       0x76 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- *fill*         0x000000004007a266        0x2 
+                0x000000004007a1c8       0x76 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ *fill*         0x000000004007a23e        0x2 
  .text.image_load
-                0x000000004007a268      0x6b3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007a240      0x6b3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x713 (size before relaxing)
- *fill*         0x000000004007a91b        0x1 
+ *fill*         0x000000004007a8f3        0x1 
  .text.bootloader_load_image
-                0x000000004007a91c       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007a8f4       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x14 (size before relaxing)
-                0x000000004007a91c                bootloader_load_image
- *fill*         0x000000004007a92c        0x0 
- *fill*         0x000000004007a92c        0x0 
- *fill*         0x000000004007a92c        0x0 
+                0x000000004007a8f4                bootloader_load_image
+ *fill*         0x000000004007a904        0x0 
+ *fill*         0x000000004007a904        0x0 
+ *fill*         0x000000004007a904        0x0 
  *libbootloader_support.a:flash_encrypt.*(.literal .text .literal.* .text.*)
  *libbootloader_support.a:flash_partitions.*(.literal .text .literal.* .text.*)
  .text.esp_partition_table_verify
-                0x000000004007a92c      0x124 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x000000004007a904      0x124 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                         0x12f (size before relaxing)
-                0x000000004007a92c                esp_partition_table_verify
+                0x000000004007a904                esp_partition_table_verify
  *libbootloader_support.a:secure_boot.*(.literal .text .literal.* .text.*)
  *libbootloader_support.a:secure_boot_signatures.*(.literal .text .literal.* .text.*)
  *libmicro-ecc.a:*.*(.literal .text .literal.* .text.*)
  *libspi_flash.a:*.*(.literal .text .literal.* .text.*)
- *fill*         0x000000004007aa50        0x0 
+ *fill*         0x000000004007aa28        0x0 
  .text.esp_rom_spiflash_read_status
-                0x000000004007aa50       0x5b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007aa50                esp_rom_spiflash_read_status
- *fill*         0x000000004007aaab        0x1 
+                0x000000004007aa28       0x5b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007aa28                esp_rom_spiflash_read_status
+ *fill*         0x000000004007aa83        0x1 
  .text.esp_rom_spiflash_wait_idle
-                0x000000004007aaac       0x30 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007aaac                esp_rom_spiflash_wait_idle
+                0x000000004007aa84       0x30 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007aa84                esp_rom_spiflash_wait_idle
  .text.esp_rom_spiflash_enable_write$constprop$7
-                0x000000004007aadc       0x3c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007aab4       0x3c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x43 (size before relaxing)
- *fill*         0x000000004007ab18        0x0 
+ *fill*         0x000000004007aaf0        0x0 
  .text.esp_rom_spiflash_program_page_internal$constprop$5
-                0x000000004007ab18       0xbb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007aaf0       0xbb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0xbf (size before relaxing)
- *fill*         0x000000004007abd3        0x1 
+ *fill*         0x000000004007abab        0x1 
  .text.esp_rom_spiflash_erase_sector
-                0x000000004007abd4       0x81 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007abac       0x81 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x88 (size before relaxing)
-                0x000000004007abd4                esp_rom_spiflash_erase_sector
- *fill*         0x000000004007ac55        0x3 
+                0x000000004007abac                esp_rom_spiflash_erase_sector
+ *fill*         0x000000004007ac2d        0x3 
  .text.esp_rom_spiflash_write
-                0x000000004007ac58       0xab /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007ac58                esp_rom_spiflash_write
- *fill*         0x000000004007ad03        0x1 
+                0x000000004007ac30       0xab /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007ac30                esp_rom_spiflash_write
+ *fill*         0x000000004007acdb        0x1 
  .text.esp_rom_spiflash_write_encrypted
-                0x000000004007ad04       0x58 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007acdc       0x58 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x5c (size before relaxing)
-                0x000000004007ad04                esp_rom_spiflash_write_encrypted
+                0x000000004007acdc                esp_rom_spiflash_write_encrypted
  .text.esp_rom_spiflash_read
-                0x000000004007ad5c      0x2e0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007ad5c                esp_rom_spiflash_read
- *fill*         0x000000004007b03c        0x0 
- *fill*         0x000000004007b03c        0x0 
- *fill*         0x000000004007b03c        0x0 
- *fill*         0x000000004007b03c        0x0 
- *fill*         0x000000004007b03c        0x0 
+                0x000000004007ad34      0x2e0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007ad34                esp_rom_spiflash_read
+ *fill*         0x000000004007b014        0x0 
+ *fill*         0x000000004007b014        0x0 
+ *fill*         0x000000004007b014        0x0 
+ *fill*         0x000000004007b014        0x0 
+ *fill*         0x000000004007b014        0x0 
  *libsoc.a:rtc_wdt.*(.literal .text .literal.* .text.*)
  .text.rtc_wdt_protect_off
-                0x000000004007b03c       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007b03c                rtc_wdt_protect_off
+                0x000000004007b014       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007b014                rtc_wdt_protect_off
  .text.rtc_wdt_protect_on
-                0x000000004007b04c        0xf /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007b04c                rtc_wdt_protect_on
- *fill*         0x000000004007b05b        0x1 
+                0x000000004007b024        0xf /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007b024                rtc_wdt_protect_on
+ *fill*         0x000000004007b033        0x1 
  .text.rtc_wdt_enable
-                0x000000004007b05c       0x2b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007b05c                rtc_wdt_enable
- *fill*         0x000000004007b087        0x1 
+                0x000000004007b034       0x2b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007b034                rtc_wdt_enable
+ *fill*         0x000000004007b05f        0x1 
  .text.rtc_wdt_set_time
-                0x000000004007b088       0x4b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007b060       0x4b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x4f (size before relaxing)
-                0x000000004007b088                rtc_wdt_set_time
- *fill*         0x000000004007b0d3        0x1 
+                0x000000004007b060                rtc_wdt_set_time
+ *fill*         0x000000004007b0ab        0x1 
  .text.rtc_wdt_set_stage
-                0x000000004007b0d4       0x7b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007b0d4                rtc_wdt_set_stage
- *fill*         0x000000004007b14f        0x1 
+                0x000000004007b0ac       0x7b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007b0ac                rtc_wdt_set_stage
+ *fill*         0x000000004007b127        0x1 
  .text.rtc_wdt_disable
-                0x000000004007b150       0x83 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007b128       0x83 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x8f (size before relaxing)
-                0x000000004007b150                rtc_wdt_disable
- *fill*         0x000000004007b1d3        0x1 
+                0x000000004007b128                rtc_wdt_disable
+ *fill*         0x000000004007b1ab        0x1 
  .text.rtc_wdt_set_length_of_reset_signal
-                0x000000004007b1d4       0x49 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007b1d4                rtc_wdt_set_length_of_reset_signal
- *fill*         0x000000004007b21d        0x0 
- *fill*         0x000000004007b21d        0x0 
- *fill*         0x000000004007b21d        0x0 
- *fill*         0x000000004007b21d        0x0 
- *fill*         0x000000004007b21d        0x0 
+                0x000000004007b1ac       0x49 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007b1ac                rtc_wdt_set_length_of_reset_signal
+ *fill*         0x000000004007b1f5        0x0 
+ *fill*         0x000000004007b1f5        0x0 
+ *fill*         0x000000004007b1f5        0x0 
+ *fill*         0x000000004007b1f5        0x0 
+ *fill*         0x000000004007b1f5        0x0 
  *libsoc.a:rtc_clk.*(.literal .text .literal.* .text.*)
- *fill*         0x000000004007b21d        0x3 
+ *fill*         0x000000004007b1f5        0x3 
  .text.rtc_clk_bbpll_disable
-                0x000000004007b220       0x3a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
- *fill*         0x000000004007b25a        0x2 
+                0x000000004007b1f8       0x3a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x000000004007b232        0x2 
  .text.rtc_clk_cpu_freq_to_pll_mhz
-                0x000000004007b25c       0xa3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b234       0xa3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0xa7 (size before relaxing)
- *fill*         0x000000004007b2ff        0x1 
+ *fill*         0x000000004007b2d7        0x1 
  .text.rtc_clk_32k_enable_common$constprop$4
-                0x000000004007b300       0x72 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
- *fill*         0x000000004007b372        0x2 
+                0x000000004007b2d8       0x72 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x000000004007b34a        0x2 
  .text.rtc_clk_32k_enable
-                0x000000004007b374       0x3a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b374                rtc_clk_32k_enable
- *fill*         0x000000004007b3ae        0x2 
+                0x000000004007b34c       0x3a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b34c                rtc_clk_32k_enable
+ *fill*         0x000000004007b386        0x2 
  .text.rtc_clk_8m_enable
-                0x000000004007b3b0       0x7f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b3b0                rtc_clk_8m_enable
- *fill*         0x000000004007b42f        0x1 
+                0x000000004007b388       0x7f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b388                rtc_clk_8m_enable
+ *fill*         0x000000004007b407        0x1 
  .text.rtc_clk_8m_enabled
-                0x000000004007b430       0x15 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b430                rtc_clk_8m_enabled
- *fill*         0x000000004007b445        0x3 
+                0x000000004007b408       0x15 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b408                rtc_clk_8m_enabled
+ *fill*         0x000000004007b41d        0x3 
  .text.rtc_clk_8md256_enabled
-                0x000000004007b448       0x15 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b448                rtc_clk_8md256_enabled
- *fill*         0x000000004007b45d        0x3 
+                0x000000004007b420       0x15 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b420                rtc_clk_8md256_enabled
+ *fill*         0x000000004007b435        0x3 
  .text.rtc_clk_slow_freq_set
-                0x000000004007b460       0x44 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b460                rtc_clk_slow_freq_set
+                0x000000004007b438       0x44 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b438                rtc_clk_slow_freq_set
  .text.rtc_clk_slow_freq_get
-                0x000000004007b4a4       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b4a4                rtc_clk_slow_freq_get
+                0x000000004007b47c       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b47c                rtc_clk_slow_freq_get
  .text.rtc_clk_slow_freq_get_hz
-                0x000000004007b4b4       0x26 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b4b4                rtc_clk_slow_freq_get_hz
- *fill*         0x000000004007b4da        0x2 
+                0x000000004007b48c       0x26 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b48c                rtc_clk_slow_freq_get_hz
+ *fill*         0x000000004007b4b2        0x2 
  .text.rtc_clk_fast_freq_set
-                0x000000004007b4dc       0x2c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b4dc                rtc_clk_fast_freq_set
+                0x000000004007b4b4       0x2c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b4b4                rtc_clk_fast_freq_set
  .text.rtc_clk_fast_freq_get
-                0x000000004007b508       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b508                rtc_clk_fast_freq_get
+                0x000000004007b4e0       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b4e0                rtc_clk_fast_freq_get
  .text.rtc_clk_bbpll_configure
-                0x000000004007b518      0x180 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b518                rtc_clk_bbpll_configure
+                0x000000004007b4f0      0x180 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b4f0                rtc_clk_bbpll_configure
  .text.rtc_clk_xtal_freq_get
-                0x000000004007b698       0x26 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b698                rtc_get_xtal
-                0x000000004007b698                rtc_clk_xtal_freq_get
- *fill*         0x000000004007b6be        0x2 
+                0x000000004007b670       0x26 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b670                rtc_get_xtal
+                0x000000004007b670                rtc_clk_xtal_freq_get
+ *fill*         0x000000004007b696        0x2 
  .text.rtc_clk_cpu_freq_mhz_to_config
-                0x000000004007b6c0       0x57 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b6c0                rtc_clk_cpu_freq_mhz_to_config
- *fill*         0x000000004007b717        0x1 
+                0x000000004007b698       0x57 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b698                rtc_clk_cpu_freq_mhz_to_config
+ *fill*         0x000000004007b6ef        0x1 
  .text.rtc_clk_cpu_freq_get_config
-                0x000000004007b718       0x80 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b6f0       0x80 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x88 (size before relaxing)
-                0x000000004007b718                rtc_clk_cpu_freq_get_config
+                0x000000004007b6f0                rtc_clk_cpu_freq_get_config
  .text.rtc_clk_xtal_freq_update
-                0x000000004007b798       0x29 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b798                rtc_clk_xtal_freq_update
- *fill*         0x000000004007b7c1        0x3 
+                0x000000004007b770       0x29 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b770                rtc_clk_xtal_freq_update
+ *fill*         0x000000004007b799        0x3 
  .text.rtc_clk_apb_freq_update
-                0x000000004007b7c4       0x19 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b7c4                rtc_clk_apb_freq_update
- *fill*         0x000000004007b7dd        0x3 
+                0x000000004007b79c       0x19 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b79c                rtc_clk_apb_freq_update
+ *fill*         0x000000004007b7b5        0x3 
  .text.rtc_clk_cpu_freq_to_xtal
-                0x000000004007b7e0       0x72 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b7b8       0x72 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x76 (size before relaxing)
-                0x000000004007b7e0                rtc_clk_cpu_freq_to_xtal
- *fill*         0x000000004007b852        0x2 
+                0x000000004007b7b8                rtc_clk_cpu_freq_to_xtal
+ *fill*         0x000000004007b82a        0x2 
  .text.rtc_clk_cpu_freq_set_config
-                0x000000004007b854      0x115 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b82c      0x115 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                         0x12d (size before relaxing)
-                0x000000004007b854                rtc_clk_cpu_freq_set_config
- *fill*         0x000000004007b969        0x3 
+                0x000000004007b82c                rtc_clk_cpu_freq_set_config
+ *fill*         0x000000004007b941        0x3 
  .text.rtc_clk_apb_freq_get
-                0x000000004007b96c       0x2a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004007b96c                rtc_clk_apb_freq_get
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
- *fill*         0x000000004007b996        0x0 
+                0x000000004007b944       0x2a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b944                rtc_clk_apb_freq_get
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
+ *fill*         0x000000004007b96e        0x0 
  *libefuse.a:*.*(.literal .text .literal.* .text.*)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x000000004007b996                _loader_text_end = ABSOLUTE (.)
+                0x000000004007b96e                _loader_text_end = ABSOLUTE (.)
 
-.iram.text      0x0000000040080400      0xd8c
+.iram.text      0x0000000040080400      0xc90
                 0x0000000040080400                . = ALIGN (0x10)
  *(.entry.text)
  *(.init.literal)
@@ -1168,125 +1152,112 @@ END GROUP
  .literal.bootloader_flash_update_id
                 0x0000000040080578        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
                                           0x8 (size before relaxing)
- .literal.rtc_vddsdio_get_config
-                0x0000000040080578       0x10 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .literal.rtc_vddsdio_set_config
-                0x0000000040080588        0x4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
-                                          0x8 (size before relaxing)
  .literal.rtc_clk_xtal_freq_estimate
-                0x000000004008058c       0x20 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x0000000040080578       0x20 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                                          0x4c (size before relaxing)
  .literal.rtc_clk_init
-                0x00000000400805ac       0x4c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x0000000040080598       0x4c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                                          0xac (size before relaxing)
  .literal.rtc_clk_cal_internal
-                0x00000000400805f8       0x4c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x00000000400805e4       0x4c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x78 (size before relaxing)
  .literal.rtc_clk_cal_ratio
-                0x0000000040080644        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040080630        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
                                           0x8 (size before relaxing)
  .literal.rtc_clk_wait_for_slow_cycle
-                0x0000000040080644        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040080630        0x8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x1c (size before relaxing)
  .text.call_start_cpu0
-                0x000000004008064c       0x54 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000040080638       0x54 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x64 (size before relaxing)
-                0x000000004008064c                call_start_cpu0
+                0x0000000040080638                call_start_cpu0
  .text.wdt_reset_info_dump
-                0x00000000400806a0       0xda /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
+                0x000000004008068c       0xda /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
                                          0xde (size before relaxing)
- *fill*         0x000000004008077a        0x2 
+ *fill*         0x0000000040080766        0x2 
  .text.unlikely.abort
-                0x000000004008077c       0x2c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
+                0x0000000040080768       0x2c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
                                          0x2f (size before relaxing)
-                0x000000004008077c                abort
- *fill*         0x00000000400807a8        0x0 
+                0x0000000040080768                abort
+ *fill*         0x0000000040080794        0x0 
  .text.bootloader_init
-                0x00000000400807a8      0x310 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
+                0x0000000040080794      0x310 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
                                         0x36b (size before relaxing)
-                0x00000000400807a8                bootloader_init
- *fill*         0x0000000040080ab8        0x0 
+                0x0000000040080794                bootloader_init
+ *fill*         0x0000000040080aa4        0x0 
  .text.bootloader_clear_bss_section
-                0x0000000040080ab8       0x16 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
-                0x0000000040080ab8                bootloader_clear_bss_section
- *fill*         0x0000000040080ace        0x2 
+                0x0000000040080aa4       0x16 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080aa4                bootloader_clear_bss_section
+ *fill*         0x0000000040080aba        0x2 
  .text.bootloader_read_bootloader_header
-                0x0000000040080ad0       0x2c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080abc       0x2c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x30 (size before relaxing)
-                0x0000000040080ad0                bootloader_read_bootloader_header
+                0x0000000040080abc                bootloader_read_bootloader_header
  .text.bootloader_check_bootloader_validity
-                0x0000000040080afc       0x30 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080ae8       0x30 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x38 (size before relaxing)
-                0x0000000040080afc                bootloader_check_bootloader_validity
+                0x0000000040080ae8                bootloader_check_bootloader_validity
  .text.bootloader_config_wdt
-                0x0000000040080b2c       0x4c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080b18       0x4c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x68 (size before relaxing)
-                0x0000000040080b2c                bootloader_config_wdt
+                0x0000000040080b18                bootloader_config_wdt
  .text.bootloader_enable_random
-                0x0000000040080b78       0x19 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080b64       0x19 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x20 (size before relaxing)
-                0x0000000040080b78                bootloader_enable_random
- *fill*         0x0000000040080b91        0x3 
+                0x0000000040080b64                bootloader_enable_random
+ *fill*         0x0000000040080b7d        0x3 
  .text.bootloader_print_banner
-                0x0000000040080b94       0x2e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080b80       0x2e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x32 (size before relaxing)
-                0x0000000040080b94                bootloader_print_banner
- *fill*         0x0000000040080bc2        0x2 
+                0x0000000040080b80                bootloader_print_banner
+ *fill*         0x0000000040080bae        0x2 
  .text.__assert_func
-                0x0000000040080bc4       0x1f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080bb0       0x1f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x23 (size before relaxing)
-                0x0000000040080bc4                __assert_func
- *fill*         0x0000000040080be3        0x1 
+                0x0000000040080bb0                __assert_func
+ *fill*         0x0000000040080bcf        0x1 
  .text.bootloader_flash_update_id
-                0x0000000040080be4        0xd /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+                0x0000000040080bd0        0xd /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
                                          0x10 (size before relaxing)
-                0x0000000040080be4                bootloader_flash_update_id
- *fill*         0x0000000040080bf1        0x3 
- .text.rtc_vddsdio_get_config
-                0x0000000040080bf4       0xa0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
-                0x0000000040080bf4                rtc_vddsdio_get_config
- .text.rtc_vddsdio_set_config
-                0x0000000040080c94       0x46 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
-                0x0000000040080c94                rtc_vddsdio_set_config
- *fill*         0x0000000040080cda        0x2 
+                0x0000000040080bd0                bootloader_flash_update_id
+ *fill*         0x0000000040080bdd        0x3 
  .text.rtc_clk_xtal_freq_estimate
-                0x0000000040080cdc       0x9f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x0000000040080be0       0x9f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                                          0xab (size before relaxing)
- *fill*         0x0000000040080d7b        0x1 
+ *fill*         0x0000000040080c7f        0x1 
  .text.rtc_clk_init
-                0x0000000040080d7c      0x1d2 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x0000000040080c80      0x1d2 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                                         0x206 (size before relaxing)
-                0x0000000040080d7c                rtc_clk_init
- *fill*         0x0000000040080f4e        0x2 
+                0x0000000040080c80                rtc_clk_init
+ *fill*         0x0000000040080e52        0x2 
  .text.rtc_clk_cal_internal
-                0x0000000040080f50      0x1a3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040080e54      0x1a3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
                                         0x1bb (size before relaxing)
- *fill*         0x00000000400810f3        0x1 
+ *fill*         0x0000000040080ff7        0x1 
  .text.rtc_clk_cal_ratio
-                0x00000000400810f4       0x20 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040080ff8       0x20 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x24 (size before relaxing)
-                0x00000000400810f4                rtc_clk_cal_ratio
+                0x0000000040080ff8                rtc_clk_cal_ratio
  .text.rtc_clk_wait_for_slow_cycle
-                0x0000000040081114       0x68 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
-                0x0000000040081114                rtc_clk_wait_for_slow_cycle
- *fill*         0x000000004008117c        0x0 
- *fill*         0x000000004008117c        0x0 
- *fill*         0x000000004008117c        0x0 
- *fill*         0x000000004008117c        0x0 
- *fill*         0x000000004008117c        0x0 
- *fill*         0x000000004008117c        0x0 
- *fill*         0x000000004008117c        0x0 
- *fill*         0x000000004008117c        0x0 
- *fill*         0x000000004008117c        0x0 
- *fill*         0x000000004008117c        0x0 
+                0x0000000040081018       0x68 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040081018                rtc_clk_wait_for_slow_cycle
+ *fill*         0x0000000040081080        0x0 
+ *fill*         0x0000000040081080        0x0 
+ *fill*         0x0000000040081080        0x0 
+ *fill*         0x0000000040081080        0x0 
+ *fill*         0x0000000040081080        0x0 
+ *fill*         0x0000000040081080        0x0 
+ *fill*         0x0000000040081080        0x0 
+ *fill*         0x0000000040081080        0x0 
+ *fill*         0x0000000040081080        0x0 
  *(.iram .iram.*)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x000000004008118c                . = (. + 0x10)
- *fill*         0x000000004008117c       0x10 
-                0x000000004008118c                _text_end = ABSOLUTE (.)
-                0x000000004008118c                _etext = .
+                0x0000000040081090                . = (. + 0x10)
+ *fill*         0x0000000040081080       0x10 
+                0x0000000040081090                _text_end = ABSOLUTE (.)
+                0x0000000040081090                _etext = .
 
 .dram0.bss      0x000000003fff0000       0x30
                 0x000000003fff0000                . = ALIGN (0x8)
@@ -3183,7 +3154,7 @@ END GROUP
                 [!provide]                        PROVIDE (UART2 = 0x3ff6e000)
 OUTPUT(/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader.elf elf32-xtensa-le)
 
-.debug_frame    0x0000000000000000     0x1058
+.debug_frame    0x0000000000000000     0x1000
  .debug_frame   0x0000000000000000       0x40 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_frame   0x0000000000000040      0x148 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
  .debug_frame   0x0000000000000188       0x28 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
@@ -3201,89 +3172,85 @@ OUTPUT(/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/
  .debug_frame   0x00000000000008d8      0x190 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .debug_frame   0x0000000000000a68       0x70 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
  .debug_frame   0x0000000000000ad8      0x130 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .debug_frame   0x0000000000000c08       0x58 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_frame   0x0000000000000c60       0x40 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_frame   0x0000000000000ca0       0xb8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_frame   0x0000000000000d58      0x2b0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_frame   0x0000000000001008       0x28 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_frame   0x0000000000001030       0x28 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_frame   0x0000000000000c08       0x40 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_frame   0x0000000000000c48       0xb8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_frame   0x0000000000000d00      0x2b0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_frame   0x0000000000000fb0       0x28 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_frame   0x0000000000000fd8       0x28 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_info     0x0000000000000000    0x5f376
+.debug_info     0x0000000000000000    0x5b043
  .debug_info    0x0000000000000000      0xea6 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_info    0x0000000000000ea6     0x53c9 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_info    0x000000000000626f      0xdeb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_info    0x000000000000705a     0x30b2 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_info    0x000000000000a10c     0x86b9 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_info    0x00000000000127c5     0x1430 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_info    0x0000000000013bf5     0x9d7e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
- .debug_info    0x000000000001d973      0x9f7 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
- .debug_info    0x000000000001e36a     0x4f88 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_info    0x00000000000232f2     0x598c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_info    0x0000000000028c7e     0x61f6 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_info    0x000000000002ee74     0x791a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_info    0x000000000003678e     0x180d /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
- .debug_info    0x0000000000037f9b      0xa34 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/log/liblog.a(log_noos.o)
- .debug_info    0x00000000000389cf     0x3dfe /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_info    0x000000000003c7cd     0x3fb9 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_info    0x0000000000040786     0x445b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .debug_info    0x0000000000044be1     0x424f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_info    0x0000000000048e30     0x776c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_info    0x000000000005059c     0x4e28 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_info    0x00000000000553c4     0x83b3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_info    0x000000000005d777      0xb02 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_info    0x000000000005e279     0x10fd /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_info    0x0000000000000ea6     0x52e5 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_info    0x000000000000618b      0xdeb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_info    0x0000000000006f76     0x30b2 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_info    0x000000000000a028     0x86b9 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_info    0x00000000000126e1     0x1430 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_info    0x0000000000013b11     0x9d7e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
+ .debug_info    0x000000000001d88f      0x9f7 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+ .debug_info    0x000000000001e286     0x4f88 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_info    0x000000000002320e     0x598c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_info    0x0000000000028b9a     0x61f6 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_info    0x000000000002ed90     0x791a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_info    0x00000000000366aa     0x180d /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+ .debug_info    0x0000000000037eb7      0xa34 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/log/liblog.a(log_noos.o)
+ .debug_info    0x00000000000388eb     0x3dfe /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_info    0x000000000003c6e9     0x3fb9 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_info    0x00000000000406a2     0x445b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+ .debug_info    0x0000000000044afd     0x776c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_info    0x000000000004c269     0x4e28 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_info    0x0000000000051091     0x83b3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_info    0x0000000000059444      0xb02 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_info    0x0000000000059f46     0x10fd /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_abbrev   0x0000000000000000     0x544f
+.debug_abbrev   0x0000000000000000     0x5169
  .debug_abbrev  0x0000000000000000      0x2f7 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_abbrev  0x00000000000002f7      0x4ee /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_abbrev  0x00000000000007e5      0x274 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_abbrev  0x0000000000000a59      0x51d /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_abbrev  0x0000000000000f76      0x626 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_abbrev  0x000000000000159c      0x2b2 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_abbrev  0x000000000000184e      0x584 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
- .debug_abbrev  0x0000000000001dd2      0x1d2 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
- .debug_abbrev  0x0000000000001fa4      0x601 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_abbrev  0x00000000000025a5      0x38e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_abbrev  0x0000000000002933      0x384 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_abbrev  0x0000000000002cb7      0x35b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_abbrev  0x0000000000003012      0x2f6 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
- .debug_abbrev  0x0000000000003308      0x1c1 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/log/liblog.a(log_noos.o)
- .debug_abbrev  0x00000000000034c9      0x536 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_abbrev  0x00000000000039ff      0x286 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_abbrev  0x0000000000003c85      0x412 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .debug_abbrev  0x0000000000004097      0x2e4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_abbrev  0x000000000000437b      0x3ea /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_abbrev  0x0000000000004765      0x366 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_abbrev  0x0000000000004acb      0x559 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_abbrev  0x0000000000005024      0x1b1 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_abbrev  0x00000000000051d5      0x27a /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_abbrev  0x00000000000002f7      0x4ec /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_abbrev  0x00000000000007e3      0x274 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_abbrev  0x0000000000000a57      0x51d /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_abbrev  0x0000000000000f74      0x626 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_abbrev  0x000000000000159a      0x2b2 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_abbrev  0x000000000000184c      0x584 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
+ .debug_abbrev  0x0000000000001dd0      0x1d2 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+ .debug_abbrev  0x0000000000001fa2      0x601 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_abbrev  0x00000000000025a3      0x38e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_abbrev  0x0000000000002931      0x384 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_abbrev  0x0000000000002cb5      0x35b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_abbrev  0x0000000000003010      0x2f6 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+ .debug_abbrev  0x0000000000003306      0x1c1 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/log/liblog.a(log_noos.o)
+ .debug_abbrev  0x00000000000034c7      0x536 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_abbrev  0x00000000000039fd      0x286 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_abbrev  0x0000000000003c83      0x412 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+ .debug_abbrev  0x0000000000004095      0x3ea /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_abbrev  0x000000000000447f      0x366 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_abbrev  0x00000000000047e5      0x559 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_abbrev  0x0000000000004d3e      0x1b1 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_abbrev  0x0000000000004eef      0x27a /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_loc      0x0000000000000000     0x7d96
+.debug_loc      0x0000000000000000     0x7666
  .debug_loc     0x0000000000000000       0xed /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_loc     0x00000000000000ed      0x762 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_loc     0x000000000000084f      0x1d9 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_loc     0x0000000000000a28     0x1469 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_loc     0x0000000000001e91     0x10e3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_loc     0x0000000000002f74      0x238 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_loc     0x00000000000031ac      0x837 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
- .debug_loc     0x00000000000039e3       0x72 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
- .debug_loc     0x0000000000003a55      0xec3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_loc     0x0000000000004918       0x41 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_loc     0x0000000000004959       0x7e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_loc     0x00000000000049d7      0x105 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_loc     0x0000000000004adc      0x25a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
- .debug_loc     0x0000000000004d36       0x15 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/log/liblog.a(log_noos.o)
- .debug_loc     0x0000000000004d4b      0xa9a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_loc     0x00000000000057e5       0x3a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_loc     0x000000000000581f      0x3fe /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .debug_loc     0x0000000000005c1d      0x653 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_loc     0x0000000000006270      0x274 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_loc     0x00000000000064e4      0x341 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_loc     0x0000000000006825      0xac2 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_loc     0x00000000000072e7       0x25 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_loc     0x000000000000730c      0xa8a /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_loc     0x00000000000000ed      0x685 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_loc     0x0000000000000772      0x1d9 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_loc     0x000000000000094b     0x1469 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_loc     0x0000000000001db4     0x10e3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_loc     0x0000000000002e97      0x238 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_loc     0x00000000000030cf      0x837 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
+ .debug_loc     0x0000000000003906       0x72 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+ .debug_loc     0x0000000000003978      0xec3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_loc     0x000000000000483b       0x41 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_loc     0x000000000000487c       0x7e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_loc     0x00000000000048fa      0x105 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_loc     0x00000000000049ff      0x25a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+ .debug_loc     0x0000000000004c59       0x15 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/log/liblog.a(log_noos.o)
+ .debug_loc     0x0000000000004c6e      0xa9a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_loc     0x0000000000005708       0x3a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_loc     0x0000000000005742      0x3fe /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+ .debug_loc     0x0000000000005b40      0x274 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_loc     0x0000000000005db4      0x341 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_loc     0x00000000000060f5      0xac2 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_loc     0x0000000000006bb7       0x25 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_loc     0x0000000000006bdc      0xa8a /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_aranges  0x0000000000000000      0x720
+.debug_aranges  0x0000000000000000      0x6f0
  .debug_aranges
                 0x0000000000000000       0x28 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_aranges
@@ -3319,19 +3286,17 @@ OUTPUT(/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/
  .debug_aranges
                 0x00000000000004c8       0x78 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .debug_aranges
-                0x0000000000000540       0x30 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x0000000000000540       0x28 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .debug_aranges
-                0x0000000000000570       0x28 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x0000000000000568       0x50 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_aranges
-                0x0000000000000598       0x50 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x00000000000005b8       0xf8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_aranges
-                0x00000000000005e8       0xf8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000000006b0       0x20 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
  .debug_aranges
-                0x00000000000006e0       0x20 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_aranges
-                0x0000000000000700       0x20 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
+                0x00000000000006d0       0x20 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_ranges   0x0000000000000000     0x1158
+.debug_ranges   0x0000000000000000     0x1108
  .debug_ranges  0x0000000000000000       0x30 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_ranges  0x0000000000000030      0x100 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
  .debug_ranges  0x0000000000000130       0x58 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
@@ -3349,83 +3314,79 @@ OUTPUT(/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/
  .debug_ranges  0x0000000000000c88       0xe0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .debug_ranges  0x0000000000000d68       0x28 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
  .debug_ranges  0x0000000000000d90       0xd0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .debug_ranges  0x0000000000000e60       0x50 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_ranges  0x0000000000000eb0       0x30 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_ranges  0x0000000000000ee0       0x40 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_ranges  0x0000000000000f20      0x198 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_ranges  0x00000000000010b8       0xa0 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_ranges  0x0000000000000e60       0x30 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_ranges  0x0000000000000e90       0x40 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_ranges  0x0000000000000ed0      0x198 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_ranges  0x0000000000001068       0xa0 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_line     0x0000000000000000    0x132be
+.debug_line     0x0000000000000000    0x1290c
  .debug_line    0x0000000000000000      0x594 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_line    0x0000000000000594     0x12bb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_line    0x000000000000184f      0x77e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_line    0x0000000000001fcd     0x20f3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_line    0x00000000000040c0     0x2127 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_line    0x00000000000061e7      0x7f7 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_line    0x00000000000069de     0x181b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
- .debug_line    0x00000000000081f9      0x413 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
- .debug_line    0x000000000000860c     0x1bff /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_line    0x000000000000a20b      0x96d /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_line    0x000000000000ab78      0x637 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_line    0x000000000000b1af      0x913 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_line    0x000000000000bac2      0x954 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
- .debug_line    0x000000000000c416      0x3b0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/log/liblog.a(log_noos.o)
- .debug_line    0x000000000000c7c6     0x1927 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_line    0x000000000000e0ed      0x3f8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_line    0x000000000000e4e5      0x99f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .debug_line    0x000000000000ee84      0x946 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_line    0x000000000000f7ca      0xaa8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_line    0x0000000000010272      0x97f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_line    0x0000000000010bf1     0x19b8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_line    0x00000000000125a9      0x2e2 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_line    0x000000000001288b      0xa33 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_line    0x0000000000000594     0x124f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_line    0x00000000000017e3      0x77e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_line    0x0000000000001f61     0x20f3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_line    0x0000000000004054     0x2127 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_line    0x000000000000617b      0x7f7 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_line    0x0000000000006972     0x181b /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
+ .debug_line    0x000000000000818d      0x413 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+ .debug_line    0x00000000000085a0     0x1bff /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_line    0x000000000000a19f      0x96d /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_line    0x000000000000ab0c      0x637 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_line    0x000000000000b143      0x913 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_line    0x000000000000ba56      0x954 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+ .debug_line    0x000000000000c3aa      0x3b0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/log/liblog.a(log_noos.o)
+ .debug_line    0x000000000000c75a     0x1927 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_line    0x000000000000e081      0x3f8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_line    0x000000000000e479      0x99f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+ .debug_line    0x000000000000ee18      0xaa8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_line    0x000000000000f8c0      0x97f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_line    0x000000000001023f     0x19b8 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_line    0x0000000000011bf7      0x2e2 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_line    0x0000000000011ed9      0xa33 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_str      0x0000000000000000     0x9fa0
+.debug_str      0x0000000000000000     0x9e8d
  .debug_str     0x0000000000000000      0x9e2 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/main/libmain.a(bootloader_start.o)
                                         0xab3 (size before relaxing)
- .debug_str     0x00000000000009e2     0x2237 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                                       0x2cd0 (size before relaxing)
- .debug_str     0x0000000000002c19       0xa6 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_str     0x00000000000009e2     0x21cc /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                                       0x2c5a (size before relaxing)
+ .debug_str     0x0000000000002bae       0xa6 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                         0x80b (size before relaxing)
- .debug_str     0x0000000000002cbf     0x12f4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_str     0x0000000000002c54     0x12f4 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                        0x1f27 (size before relaxing)
- .debug_str     0x0000000000003fb3     0x115f /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_str     0x0000000000003f48     0x116c /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                        0x45b5 (size before relaxing)
- .debug_str     0x0000000000005112       0xf1 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_str     0x00000000000050b4       0xf1 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                        0x1275 (size before relaxing)
- .debug_str     0x0000000000005203     0x19eb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
+ .debug_str     0x00000000000051a5     0x19eb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
                                        0x58a5 (size before relaxing)
- .debug_str     0x0000000000006bee       0x7a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+ .debug_str     0x0000000000006b90       0x7a /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
                                         0x682 (size before relaxing)
- .debug_str     0x0000000000006c68      0x3eb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_str     0x0000000000006c0a      0x3eb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                        0x2f39 (size before relaxing)
- .debug_str     0x0000000000007053      0x356 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_str     0x0000000000006ff5      0x356 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                        0x35ff (size before relaxing)
- .debug_str     0x00000000000073a9      0x256 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_str     0x000000000000734b      0x256 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
                                        0x3981 (size before relaxing)
- .debug_str     0x00000000000075ff     0x1551 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_str     0x00000000000075a1     0x1551 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                        0x471d (size before relaxing)
- .debug_str     0x0000000000008b50       0xf5 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+ .debug_str     0x0000000000008af2       0xf5 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
                                         0xc33 (size before relaxing)
- .debug_str     0x0000000000008c45       0xfb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/log/liblog.a(log_noos.o)
+ .debug_str     0x0000000000008be7       0xfb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/log/liblog.a(log_noos.o)
                                         0xd73 (size before relaxing)
- .debug_str     0x0000000000008d40      0x4af /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_str     0x0000000000008ce2      0x4af /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                        0x25c0 (size before relaxing)
- .debug_str     0x00000000000091ef       0xb6 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_str     0x0000000000009191       0xb6 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
                                        0x2747 (size before relaxing)
- .debug_str     0x00000000000092a5      0x14e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+ .debug_str     0x0000000000009247      0x14e /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                        0x2374 (size before relaxing)
- .debug_str     0x00000000000093f3       0xb5 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
-                                       0x2800 (size before relaxing)
- .debug_str     0x00000000000094a8      0x2cb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_str     0x0000000000009395      0x2cb /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                                        0x4785 (size before relaxing)
- .debug_str     0x0000000000009773      0x172 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_str     0x0000000000009660      0x172 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
                                        0x25d5 (size before relaxing)
- .debug_str     0x00000000000098e5      0x3c3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_str     0x00000000000097d2      0x3c3 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                        0x4a2d (size before relaxing)
- .debug_str     0x0000000000009ca8      0x21f /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_str     0x0000000000009b95      0x21f /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_bswapsi2.o)
                                         0x6df (size before relaxing)
- .debug_str     0x0000000000009ec7       0xd9 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_str     0x0000000000009db4       0xd9 /home/walther/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcc.a(_udivdi3.o)
                                         0x759 (size before relaxing)
 
 .comment        0x0000000000000000       0x25
@@ -3447,7 +3408,6 @@ OUTPUT(/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/
  .comment       0x0000000000000025       0x26 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .comment       0x0000000000000025       0x26 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
  .comment       0x0000000000000025       0x26 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .comment       0x0000000000000025       0x26 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
  .comment       0x0000000000000025       0x26 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .comment       0x0000000000000025       0x26 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)
  .comment       0x0000000000000025       0x26 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk.o)
@@ -3472,7 +3432,6 @@ OUTPUT(/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/
  .xtensa.info   0x0000000000000038        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .xtensa.info   0x0000000000000038        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(cpu_util.o)
  .xtensa.info   0x0000000000000038        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .xtensa.info   0x0000000000000038        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_init.o)
  .xtensa.info   0x0000000000000038        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .xtensa.info   0x0000000000000038        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(gpio_periph.o)
  .xtensa.info   0x0000000000000038        0x0 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/soc/libsoc.a(rtc_time.o)

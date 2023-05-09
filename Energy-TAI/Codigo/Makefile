@@ -3,7 +3,7 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := adc
+PROJECT_NAME := TAI1
 
 include $(IDF_PATH)/make/project.mk
 

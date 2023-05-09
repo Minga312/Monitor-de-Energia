@@ -9,7 +9,8 @@ esp32/spi_periph.o: \
  /home/walther/esp-idf/components/soc/esp32/include/soc/spi_reg.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/walther/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h
+ /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
+ /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/../include/sdkconfig.h
 
 /home/walther/esp-idf/components/soc/include/soc/spi_periph.h:
 
@@ -30,4 +31,6 @@ esp32/spi_periph.o: \
 /home/walther/esp-idf/components/soc/esp32/include/soc/spi_struct.h:
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
+
+/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/build/bootloader/../include/sdkconfig.h:
 /home/walther/esp-idf/components/soc/esp32/spi_periph.c:

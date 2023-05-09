@@ -101,6 +101,8 @@ host/bluedroid/bta/jv/bta_jv_act.o: \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/port_api.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_co.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/avct_api.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/avdt_api.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gap_api.h \
@@ -305,6 +307,10 @@ host/bluedroid/bta/jv/bta_jv_act.o: \
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/port_api.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_co.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h:
 

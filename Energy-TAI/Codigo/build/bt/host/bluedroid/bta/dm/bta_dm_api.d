@@ -89,11 +89,16 @@ host/bluedroid/bta/dm/bta_dm_api.o: \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/semaphore.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h \
+ /home/walther/esp-idf/components/bt/common/osi/include/osi/list.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/bta/sys/include/bta_sys_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/rfcdefs.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h \
- /home/walther/esp-idf/components/bt/common/osi/include/osi/list.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/allocator.h
 
@@ -275,6 +280,14 @@ host/bluedroid/bta/dm/bta_dm_api.o: \
 
 /home/walther/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h:
 
+/home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h:
+
+/home/walther/esp-idf/components/bt/common/osi/include/osi/list.h:
+
 /home/walther/esp-idf/components/bt/host/bluedroid/bta/sys/include/bta_sys_int.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h:
@@ -283,7 +296,9 @@ host/bluedroid/bta/dm/bta_dm_api.o: \
 
 /home/walther/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h:
 
-/home/walther/esp-idf/components/bt/common/osi/include/osi/list.h:
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h:
 

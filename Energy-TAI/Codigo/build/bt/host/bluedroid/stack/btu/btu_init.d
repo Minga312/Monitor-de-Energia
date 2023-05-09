@@ -107,7 +107,15 @@ host/bluedroid/stack/btu/btu_init.o: \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btu.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/rfcdefs.h \
- /home/walther/esp-idf/components/bt/host/bluedroid/stack/sdp/include/sdpint.h
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/sdp/include/sdpint.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/gatt/include/gatt_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/smp/include/smp_int.h
 
 /home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_defs.h:
 
@@ -323,5 +331,21 @@ host/bluedroid/stack/btu/btu_init.o: \
 
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/rfcdefs.h:
 
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h:
+
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/sdp/include/sdpint.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/gatt/include/gatt_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/smp/include/smp_int.h:
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/btu/btu_init.c:

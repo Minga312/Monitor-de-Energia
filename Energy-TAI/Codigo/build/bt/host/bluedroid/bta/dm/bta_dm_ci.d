@@ -89,6 +89,10 @@ host/bluedroid/bta/dm/bta_dm_ci.o: \
  /home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/semaphore.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h \
+ /home/walther/esp-idf/components/bt/common/osi/include/osi/list.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_dm_ci.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/allocator.h
 
@@ -269,6 +273,14 @@ host/bluedroid/bta/dm/bta_dm_ci.o: \
 /home/walther/esp-idf/components/bt/common/osi/include/osi/semaphore.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h:
+
+/home/walther/esp-idf/components/bt/common/osi/include/osi/list.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_dm_ci.h:
 

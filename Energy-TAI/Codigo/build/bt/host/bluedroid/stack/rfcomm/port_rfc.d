@@ -87,6 +87,12 @@ host/bluedroid/stack/rfcomm/port_rfc.o: \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/list.h \
  /home/walther/esp-idf/components/bt/common/osi/include/osi/semaphore.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h \
+ /home/walther/esp-idf/components/bt/common/osi/include/osi/thread.h \
+ /home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h \
+ /home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/rfcomm/include/port_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/rfcomm/include/rfc_int.h \
  /home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h \
@@ -268,6 +274,18 @@ host/bluedroid/stack/rfcomm/port_rfc.o: \
 /home/walther/esp-idf/components/bt/common/osi/include/osi/list.h:
 
 /home/walther/esp-idf/components/bt/common/osi/include/osi/semaphore.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_ble_int.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h:
+
+/home/walther/esp-idf/components/bt/common/osi/include/osi/thread.h:
+
+/home/walther/esp-idf/components/freertos/include/freertos/xtensa_api.h:
+
+/home/walther/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h:
 
 /home/walther/esp-idf/components/bt/host/bluedroid/stack/rfcomm/include/port_int.h:
 
