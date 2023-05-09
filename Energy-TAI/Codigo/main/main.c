@@ -31,7 +31,7 @@ void app_main()
     }
     read_memory();
     init_bluetooth();
-    // init_wifi();
+    init_wifi();
     init_readings();
     if (wifi_conectado)
         monta_e_envia_mensagem();
@@ -40,7 +40,7 @@ void app_main()
     {
 
         xSemaphoreTake(kwh_mutex, portMAX_DELAY);
-        precoatual = kwatt_hr * tarifa;
+        precoatual = (kwatt_hr - (valor_salvo / tarifa)) * tarifa;
         xSemaphoreGive(kwh_mutex);
 
         if (wifi_conectado)

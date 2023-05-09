@@ -261,6 +261,7 @@ void salva_ultimo_mes()
     esp_err_t err = nvs_open("storage", NVS_READWRITE, &my_handle);
     printf("mes_salvo = %d\n", mes_salvo);
     err = nvs_set_i32(my_handle, "mes_salvo", (int32_t)mes_salvo);
+    // err = nvs_set_i32(my_handle, "kwh_mensal", (int32_t)kwatt_hr * 10000000);
     err = nvs_commit(my_handle);
     printf((err != ESP_OK) ? "Failed!\n" : "Done\n");
     nvs_close(my_handle);
@@ -282,6 +283,7 @@ void salva_ultimo_valor()
     nvs_handle_t my_handle;
     esp_err_t err = nvs_open("storage", NVS_READWRITE, &my_handle);
     err = nvs_set_i32(my_handle, "valor_salvo", (int32_t)valor_salvo * 1000);
+
     err = nvs_commit(my_handle);
     printf((err != ESP_OK) ? "Failed!\n" : "Done\n");
     nvs_close(my_handle);
