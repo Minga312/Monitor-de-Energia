@@ -14,8 +14,10 @@ extern float tarifa;
 extern float alarme;
 extern float valor_salvo;
 extern int mes_salvo;
+extern int wifi_conectado;
 
-float precoatual = 0;
+extern float kwatt_hr;
+extern float precoatual;
 
 void app_main()
 {
@@ -31,33 +33,35 @@ void app_main()
     init_bluetooth();
     // init_wifi();
     init_readings();
-    // monta_e_envia_mensagem();
-    alarme = 1000000;
-    valor_salvo = 0;
+    if (wifi_conectado)
+        monta_e_envia_mensagem();
 
     while (1)
     {
-        //  printLocalTime();
 
         xSemaphoreTake(kwh_mutex, portMAX_DELAY);
         precoatual = kwatt_hr * tarifa;
         xSemaphoreGive(kwh_mutex);
 
-        if (tempo_atual.tm_min != mes_salvo)
+        if (wifi_conectado)
         {
-            printf("\nPor Data \n");
+            printLocalTime();
+            if (tempo_atual.tm_min != mes_salvo)
+            {
+                printf("\n Envio Por Data \n");
 
-            // monta_e_envia_mensagem();
-            mes_salvo = tempo_atual.tm_min;
-            salva_ultimo_mes();
-        }
-        else if (precoatual - valor_salvo >= alarme)
-        {
-            printf("\nPor Alarme \n");
+                monta_e_envia_mensagem();
+                mes_salvo = tempo_atual.tm_min;
+                salva_ultimo_mes();
+            }
+            else if (precoatual - valor_salvo >= alarme)
+            {
+                printf("\n Envio Por Alarme \n");
 
-            // monta_e_envia_mensagem();
-            valor_salvo = precoatual;
-            salva_ultimo_valor();
+                monta_e_envia_mensagem();
+                valor_salvo = precoatual;
+                salva_ultimo_valor();
+            }
         }
 
         vTaskDelay(100 / portTICK_PERIOD_MS);

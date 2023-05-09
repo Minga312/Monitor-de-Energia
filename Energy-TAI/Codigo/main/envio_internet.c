@@ -38,6 +38,7 @@ const int daylightOffset_sec = -3600 * 3;
 struct tm tempo_atual;
 
 static int s_retry_num = 0;
+int wifi_conectado = false;
 
 extern SemaphoreHandle_t kwh_mutex;
 
@@ -201,11 +202,13 @@ void wifi_init_sta(void)
     {
         ESP_LOGI(TAG, "connected to ap SSID:%s password:%s",
                  wifi, senha);
+        wifi_conectado = true;
     }
     else if (bits & WIFI_FAIL_BIT)
     {
         ESP_LOGI(TAG, "Failed to connect to SSID:%s, password:%s",
                  wifi, senha);
+        wifi_conectado = false;
     }
     else
     {
@@ -264,8 +267,11 @@ void init_wifi(void)
 {
     ESP_LOGI(TAG, "ESP_WIFI_MODE_AP");
     wifi_init_sta();
-    obtain_time();
-    printLocalTime();
+    if (wifi_conectado)
+    {
+        obtain_time();
+        printLocalTime();
+    }
 }
 
 void monta_e_envia_mensagem()

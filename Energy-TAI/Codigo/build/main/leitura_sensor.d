@@ -76,7 +76,8 @@ leitura_sensor.o: \
  /home/walther/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h \
  /home/walther/esp-idf/components/driver/include/driver/dac.h \
  /home/walther/esp-idf/components/soc/include/hal/dac_types.h \
- /home/walther/esp-idf/components/soc/esp32/include/soc/dac_caps.h
+ /home/walther/esp-idf/components/soc/esp32/include/soc/dac_caps.h \
+ /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/main/memoria_e_bluetooth.h
 
 /home/walther/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -231,4 +232,6 @@ leitura_sensor.o: \
 /home/walther/esp-idf/components/soc/include/hal/dac_types.h:
 
 /home/walther/esp-idf/components/soc/esp32/include/soc/dac_caps.h:
+
+/home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/main/memoria_e_bluetooth.h:
 /home/walther/Documents/Documents/TAI/Energy-TAI/Codigo/main/./leitura_sensor.c:

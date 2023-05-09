@@ -25,10 +25,12 @@ CONDITIONS OF ANY KIND, either express or implied.
 #include "esp_system.h"
 #include "time.h"
 #include "sys/time.h"
+#include "sys/time.h"
+#include "envio_internet.h"
 
 #define SPP_TAG "SPP_ACCEPTOR_DEMO"
 #define SPP_SERVER_NAME "SPP_SERVER"
-#define EXAMPLE_DEVICE_NAME "TESTES"
+#define EXAMPLE_DEVICE_NAME "MONITOR-ENERGIA"
 #define SPP_SHOW_DATA 0
 #define SPP_SHOW_SPEED 1
 #define SPP_SHOW_MODE SPP_SHOW_DATA /*Choose show mode: show data or speed*/
@@ -40,12 +42,17 @@ CONDITIONS OF ANY KIND, either express or implied.
 
 unsigned char naoapagapfvr[255] = "FALOU O MEU AMOR";
 unsigned char dados[255] = "Os dados enviados foram: ";
-char wifi[20], senha[20], numero[20], key[20], stralarme[20], strtarifa[20], strimpostos[20];
+char wifi[20], senha[20], numero[20], key[20], stralarme[20], strtarifa[20], strimpostos[20], strvalor_salvo[20], strkwh[20], stratual[20];
 float tarifa, impostos, alarme;
 int mes_salvo = 0;
 float valor_salvo = 0;
-int32_t inttarifa, intimpostos, intalarme, int_valor_salvo;
+int32_t inttarifa, intimpostos, intalarme, int_valor_salvo, intkwatt_hr;
 int idx = 0;
+
+extern SemaphoreHandle_t kwh_mutex;
+
+extern float kwatt_hr;
+float precoatual;
 
 unsigned char tamanho_dados = 25;
 static const esp_spp_mode_t esp_spp_mode = ESP_SPP_MODE_CB;
@@ -210,14 +217,41 @@ void read_memory()
     {
     case ESP_OK:
         printf("Done\n");
-        printf("intalarme value = %d\n", intalarme);
+        printf("alarme value = %.1f\n", alarme);
         break;
     default:
         printf("Error (%s) reading intalarme!\n", esp_err_to_name(err));
-        intalarme = 20;
+        alarme = 20;
+    }
+
+    err = nvs_get_i32(my_handle, "kwatt_hr", &intkwatt_hr);
+    kwatt_hr = (float)intkwatt_hr / 10000000;
+    switch (err)
+    {
+    case ESP_OK:
+        printf("Done\n");
+        printf("intkwatt_hr value = %d\n", intkwatt_hr);
+        break;
+    default:
+        printf("Error (%s) reading intkwatt_hr!\n", esp_err_to_name(err));
+        kwatt_hr = 0;
     }
 
     nvs_close(my_handle);
+
+    printf("\n");
+    printf("wifi = %s\n", wifi);
+    printf("senha = %s\n", senha);
+    printf("numero = %s\n", numero);
+    printf("key = %s\n", key);
+    printf("tarifa = %f\n", tarifa);
+    printf("impostos = %f\n", impostos);
+    printf("mes_salvo = %d\n", mes_salvo);
+    printf("valor_salvo = %f\n", valor_salvo);
+    printf("alarme = %f\n", alarme);
+    printf("kwhr = %f\n", kwatt_hr);
+
+    printf("\n");
 }
 
 void salva_ultimo_mes()
@@ -225,12 +259,23 @@ void salva_ultimo_mes()
     printf("\n");
     nvs_handle_t my_handle;
     esp_err_t err = nvs_open("storage", NVS_READWRITE, &my_handle);
-    err = nvs_set_i32(my_handle, "mes_salvo", mes_salvo);
+    printf("mes_salvo = %d\n", mes_salvo);
+    err = nvs_set_i32(my_handle, "mes_salvo", (int32_t)mes_salvo);
     err = nvs_commit(my_handle);
     printf((err != ESP_OK) ? "Failed!\n" : "Done\n");
     nvs_close(my_handle);
 }
 
+void salva_kwhr_atual()
+{
+    printf("\n");
+    nvs_handle_t my_handle;
+    esp_err_t err = nvs_open("storage", NVS_READWRITE, &my_handle);
+    err = nvs_set_i32(my_handle, "kwatt_hr", (int32_t)kwatt_hr * 10000000);
+    err = nvs_commit(my_handle);
+    // printf((err != ESP_OK) ? "Failed!\n" : "Done\n");
+    nvs_close(my_handle);
+}
 void salva_ultimo_valor()
 {
     printf("\n");
@@ -274,10 +319,17 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
 
         if (strstr((const char *)param->data_ind.data, "ler#"))
         {
-
             sprintf(strtarifa, "%g", tarifa);
             sprintf(strimpostos, "%g", impostos);
             sprintf(stralarme, "%g", alarme);
+
+            while (!xSemaphoreTake(kwh_mutex, portMAX_DELAY))
+                ;
+            sprintf(strkwh, "%.7f", kwatt_hr);
+            xSemaphoreGive(kwh_mutex);
+
+            sprintf(stratual, "%.3f", precoatual);
+
             strcpy((char *)dados, wifi);
             strcat((char *)dados, "+");
             strcat((char *)dados, senha);
@@ -291,6 +343,10 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
             strcat((char *)dados, strimpostos);
             strcat((char *)dados, "+");
             strcat((char *)dados, stralarme);
+            strcat((char *)dados, "+");
+            strcat((char *)dados, strkwh);
+            strcat((char *)dados, "+");
+            strcat((char *)dados, stratual);
             strcat((char *)dados, "\r\n");
 
             printf("\nPacote montado: %s \n ", dados);
@@ -364,6 +420,15 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
             alarme = atof(palavra[6]);
             intalarme = (int)alarme * 1000;
             err = nvs_set_i32(my_handle, "intalarme", intalarme);
+            printf((err != ESP_OK) ? "Failed!\n" : "Done\n");
+
+            while (!xSemaphoreTake(kwh_mutex, portMAX_DELAY))
+                ;
+            kwatt_hr = atof(palavra[7]);
+            intkwatt_hr = (int)kwatt_hr * 10000000;
+            xSemaphoreGive(kwh_mutex);
+
+            err = nvs_set_i32(my_handle, "kwatt_hr", intalarme);
             printf((err != ESP_OK) ? "Failed!\n" : "Done\n");
 
             printf("O wifi e': %s\n", wifi);

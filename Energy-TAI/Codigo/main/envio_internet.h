@@ -1,3 +1,5 @@
+#ifndef WIFI
+#define WIFI
 
 #include <string.h>
 #include "freertos/FreeRTOS.h"
@@ -26,3 +28,5 @@ void init_wifi();
 void monta_e_envia_mensagem();
 void printLocalTime();
 void obtain_time();
+
+#endif

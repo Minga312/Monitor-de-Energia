@@ -14,6 +14,7 @@
 #include "esp_expression_with_stack.h"
 #include "leitura_sensor.h"
 #include "driver/dac.h"
+#include "memoria_e_bluetooth.h"
 
 static esp_adc_cal_characteristics_t *adc_chars;
 static const adc_channel_t channel_current = ADC_CHANNEL_4; // Pino 32   CORRENTE
@@ -30,9 +31,9 @@ SemaphoreHandle_t kwh_mutex = NULL; // Mutex para proteger o acesso à variável
 uint64_t start_time;
 uint64_t end_time;
 uint64_t exec_time;
+
 void make_readings()
 {
-
     // Configure ADC
     adc1_config_width(ADC_WIDTH_BIT_12);
     adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
@@ -62,6 +63,7 @@ void make_readings()
 
         kwatt_hr += ((voltage * current * exec_time) / (3600.0 * 1000000000.0));
         printf("KWh: %.8f W\n", kwatt_hr);
+        salva_kwhr_atual();
         xSemaphoreGive(kwh_mutex);
         vTaskDelay(55 / portTICK_PERIOD_MS);
         // 19.22
