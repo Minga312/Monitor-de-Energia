@@ -276,13 +276,13 @@ void init_wifi(void)
 void monta_e_envia_mensagem()
 {
     xSemaphoreTake(kwh_mutex, portMAX_DELAY);
-    sprintf(whatsapp_messagae, "%02d/%02d/%04d+%02d:%02d:%02d\\n\\n*Monitoramento+de+Energia*\\n\\nTarifa kWh:+R$+%0.2f\\nConsumido:+%0.2fkWh\\n\\nValor+a+pagar:+R$+%0.2f", dia, mes, ano, hora, minuto, segundo, tarifa, kwatt_hr, precoatual);
+    sprintf(whatsapp_messagae, "%02d/%02d/%04d+%02d:%02d:%02d\\n\\n*Monitoramento+de+Energia*\\n\\nTarifa+kWh:+R$+%0.2f\\nConsumido:+%0.2fkWh\\n\\nValor+a+pagar:+R$+%0.2f", dia, mes, ano, hora, minuto, segundo, tarifa, kwatt_hr, precoatual);
     xSemaphoreGive(kwh_mutex);
 
     strcat(urlbot_f, urlbot_1);
     strcat(urlbot_f, numero);
     strcat(urlbot_f, urlbot_2);
-    strcat(urlbot_f, "oi+teste");
+    strcat(urlbot_f,whatsapp_messagae);
     strcat(urlbot_f, urlbot_3);
     strcat(urlbot_f, key);
     printf("%s\n", urlbot_f);
