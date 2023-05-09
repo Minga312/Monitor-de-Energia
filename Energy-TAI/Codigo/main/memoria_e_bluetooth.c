@@ -33,6 +33,9 @@ CONDITIONS OF ANY KIND, either express or implied.
 #define SPP_SHOW_SPEED 1
 #define SPP_SHOW_MODE SPP_SHOW_DATA /*Choose show mode: show data or speed*/
 
+#define WIFI_DEFAULT "Engenharia"
+#define SENHA_DEFAULT "12345678"
+
 unsigned char naoapagapfvr[255] = "FALOU O MEU AMOR";
 unsigned char dados[255] = "Os dados enviados foram: ";
 char wifi[20], senha[20], numero[20], key[20], stralarme[20], strtarifa[20], strimpostos[20];
@@ -56,7 +59,7 @@ void read_memory()
     printf("Opening Non-Volatile Storage (NVS) handle... ");
     nvs_handle_t my_handle;
     esp_err_t err = nvs_open("storage", NVS_READWRITE, &my_handle);
-    printf("Reading restart counter from NVS ... ");
+    printf("Reading restart counter from NVS ... \n");
     size_t required_size = 0;
     int32_t restart_counter = 0; // value will default to 0, if not set yet in NVS
     err = nvs_get_str(my_handle, "wifi", NULL, &required_size);
@@ -77,10 +80,12 @@ void read_memory()
     else if (err == ESP_ERR_NVS_NOT_FOUND)
     {
         printf("The value is not initialized yet!\n");
+        strcpy(wifi, WIFI_DEFAULT);
     }
     else
     {
         printf("Error (%s) reading!\n", esp_err_to_name(err));
+        strcpy(wifi, WIFI_DEFAULT);
     }
 
     required_size = 0;
@@ -102,10 +107,12 @@ void read_memory()
     else if (err == ESP_ERR_NVS_NOT_FOUND)
     {
         printf("The value is not initialized yet!\n");
+        strcpy(senha, SENHA_DEFAULT);
     }
     else
     {
         printf("Error (%s) reading!\n", esp_err_to_name(err));
+        strcpy(senha, SENHA_DEFAULT);
     }
 
     required_size = 0;
@@ -294,7 +301,7 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
             printf("\n");
             printf("Opening Non-Volatile Storage (NVS) handle... ");
             nvs_handle_t my_handle;
-            esp_err_t  err = nvs_open("storage", NVS_READWRITE, &my_handle);
+            esp_err_t err = nvs_open("storage", NVS_READWRITE, &my_handle);
 
             strcpy(wifi, palavra[0]);
             err = nvs_set_str(my_handle, "wifi", wifi);

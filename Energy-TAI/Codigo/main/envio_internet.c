@@ -15,7 +15,7 @@ static EventGroupHandle_t s_wifi_event_group;
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT BIT1
 
-#define EXAMPLE_ESP_WIFI_SSID "teset"
+#define EXAMPLE_ESP_WIFI_SSID "Engenharia"
 #define EXAMPLE_ESP_WIFI_PASS "12345678"
 
 extern char key[20];
@@ -181,14 +181,15 @@ void wifi_init_sta(void)
 
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = EXAMPLE_ESP_WIFI_SSID,
-            .password = EXAMPLE_ESP_WIFI_PASS,
             /* Setting a password implies station will connect to all security modes including WEP/WPA.
              * However these modes are deprecated and not advisable to be used. Incase your Access point
              * doesn't support WPA2, these mode can be enabled by commenting below line */
             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
         },
     };
+    strcpy((char *)wifi_config.sta.ssid, wifi);
+    strcpy((char *)wifi_config.sta.password, senha);
+
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
     ESP_ERROR_CHECK(esp_wifi_start());
@@ -233,7 +234,7 @@ void printLocalTime()
     time(&now);
     localtime_r(&now, &tempo_atual);
     strftime(strftime_buf, sizeof(strftime_buf), "%A,+%B+%d+%Y+%H:%M:%S", &tempo_atual);
-    ESP_LOGI(TAG, "The current date/time is: %s", strftime_buf);
+   // ESP_LOGI(TAG, "The current date/time is: %s", strftime_buf);
 }
 
 void initialize_sntp(void)

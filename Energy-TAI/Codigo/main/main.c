@@ -27,7 +27,7 @@ void app_main()
     init_bluetooth();
     init_wifi();
     init_readings();
-    monta_e_envia_mensagem();
+    // monta_e_envia_mensagem();
 
     while (1)
     {
@@ -38,8 +38,8 @@ void app_main()
         xSemaphoreGive(kwh_mutex);
 
         if (tempo_atual.tm_mon != mes_salvo || alarme >= precoatual - valor_salvo)
-            monta_e_envia_mensagem();
+            // monta_e_envia_mensagem();
 
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+            vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
