@@ -55,18 +55,15 @@ void make_readings()
         // Fim da medição do tempo
         end_time = esp_timer_get_time();
 
-        while (!xSemaphoreTake(kwh_mutex, portMAX_DELAY))
-            ;
-
-        // Tempo de execução da função em microssegundos
-        exec_time = end_time - start_time;
+        xSemaphoreTake(kwh_mutex, portMAX_DELAY);
+            // Tempo de execução da função em microssegundos
+            exec_time = end_time - start_time;
 
         kwatt_hr += ((voltage * current * exec_time) / (3600.0 * 1000000000.0));
         printf("KWh: %.8f W\n", kwatt_hr);
         salva_kwhr_atual();
         xSemaphoreGive(kwh_mutex);
         vTaskDelay(55 / portTICK_PERIOD_MS);
-        // 19.22
     }
 }
 
@@ -74,7 +71,7 @@ void init_readings()
 {
     // Crie o mutex para proteger o acesso à variável result
     kwh_mutex = xSemaphoreCreateMutex();
-    xTaskCreate(make_readings, "make_readings", 12400, NULL, 5, NULL);
+    xTaskCreatePinnedToCore(make_readings, "make_readings", 12400, NULL, 5, NULL,1);
 }
 
 float get_current()

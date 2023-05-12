@@ -40,7 +40,7 @@ CONDITIONS OF ANY KIND, either express or implied.
 #define NUMERO_DEFAULT "5531916239"
 #define KEY_DEFAULT "442757"
 
-unsigned char naoapagapfvr[255] = "FALOU O MEU AMOR";
+unsigned char naoapagapfvr[255] = "\nFALOU O MEU AMOR 🥰🥰🥰 \n";
 unsigned char dados[255] = "Os dados enviados foram: ";
 char wifi[20], senha[20], numero[20], key[20], stralarme[20], strtarifa[20], strimpostos[20], strvalor_salvo[20], strkwh[20], stratual[20];
 float tarifa, impostos, alarme;
@@ -325,8 +325,7 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
             sprintf(strimpostos, "%g", impostos);
             sprintf(stralarme, "%g", alarme);
 
-            while (!xSemaphoreTake(kwh_mutex, portMAX_DELAY))
-                ;
+            xSemaphoreTake(kwh_mutex, portMAX_DELAY);
             sprintf(strkwh, "%.7f", kwatt_hr);
             xSemaphoreGive(kwh_mutex);
 
@@ -342,35 +341,34 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
             strcat((char *)dados, "+");
             strcat((char *)dados, strtarifa);
             strcat((char *)dados, "+");
-            strcat((char *)dados, strimpostos);
-            strcat((char *)dados, "+");
             strcat((char *)dados, stralarme);
             strcat((char *)dados, "+");
             strcat((char *)dados, strkwh);
             strcat((char *)dados, "+");
             strcat((char *)dados, stratual);
             strcat((char *)dados, "\r\n");
+            // so the full send packet is wifi+senha+numero+key+tarifa+alarme+kwhr+valor
 
             printf("\nPacote montado: %s \n ", dados);
             esp_spp_write(param->data_ind.handle, strlen((const char *)dados), dados);
         }
         else if (strstr((const char *)param->data_ind.data, "bauticabaubau#"))
         {
-            printf("FALOU O MEU AMOR");
+            printf("\nFALOU O MEU AMOR\n");
             esp_spp_write(param->data_ind.handle, strlen((const char *)naoapagapfvr), naoapagapfvr);
         }
 
         else // parte que coloca valores
 
         {
-            char palavra[20][20];
+            char palavra[20][35];
 
             int i = 0, j = 0, k = 0;
             while (param->data_ind.data[i] != '#')
             {
-
                 if (param->data_ind.data[i] == '+')
                 {
+                    printf(" \n\n\n Palavra montada %s", palavra[j]);
                     palavra[j][k] = '\0';
                     j++;
                     k = 0;
@@ -424,14 +422,15 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
             err = nvs_set_i32(my_handle, "intalarme", intalarme);
             printf((err != ESP_OK) ? "Failed!\n" : "Done\n");
 
-            while (!xSemaphoreTake(kwh_mutex, portMAX_DELAY))
-                ;
+            xSemaphoreTake(kwh_mutex, portMAX_DELAY);
+
             kwatt_hr = atof(palavra[7]);
             intkwatt_hr = (int)kwatt_hr * 10000000;
             xSemaphoreGive(kwh_mutex);
 
             err = nvs_set_i32(my_handle, "kwatt_hr", intalarme);
             printf((err != ESP_OK) ? "Failed!\n" : "Done\n");
+            // the packet receive is in the format: "wifi+senha+numero+key+tarifa+impostos+alarme+kwatt_hr"
 
             printf("O wifi e': %s\n", wifi);
             printf("A senha e': %s\n", senha);
@@ -440,6 +439,7 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
             printf("A tarifa e': %f\n", tarifa);
             printf("Os impostos sao: %f\n", impostos);
             printf("O alarme e': %f\n", alarme);
+            printf("O kwatt_hr e': %f\n", kwatt_hr);
             nvs_close(my_handle);
         }
         break;

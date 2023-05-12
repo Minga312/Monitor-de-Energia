@@ -26,6 +26,7 @@
 
 void init_wifi();
 void monta_e_envia_mensagem();
+void tenta_reconectar();
 void printLocalTime();
 void obtain_time();
 

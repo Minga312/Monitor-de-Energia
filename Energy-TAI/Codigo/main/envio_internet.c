@@ -156,6 +156,65 @@ static void https_with_url(void)
     esp_http_client_cleanup(client);
 }
 
+void tenta_reconectar()
+{
+
+    s_wifi_event_group = xEventGroupCreate();
+
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+
+    ESP_ERROR_CHECK(esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &event_handler, NULL));
+    ESP_ERROR_CHECK(esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &event_handler, NULL));
+
+    wifi_config_t wifi_config = {
+        .sta = {
+            /* Setting a password implies station will connect to all security modes including WEP/WPA.
+             * However these modes are deprecated and not advisable to be used. Incase your Access point
+             * doesn't support WPA2, these mode can be enabled by commenting below line */
+            .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+        },
+    };
+    strcpy((char *)wifi_config.sta.ssid, wifi);
+    strcpy((char *)wifi_config.sta.password, senha);
+
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
+    ESP_ERROR_CHECK(esp_wifi_start());
+
+    ESP_LOGI(TAG, "wifi_init_sta finished.");
+    printf("Seu travar aqui sou gay .\n");
+    /* Waiting until either the connection is established (WIFI_CONNECTED_BIT) or connection failed for the maximum
+     * number of re-tries (WIFI_FAIL_BIT). The bits are set by event_handler() (see above) */
+    EventBits_t bits = xEventGroupWaitBits(s_wifi_event_group,
+                                           WIFI_CONNECTED_BIT | WIFI_FAIL_BIT,
+                                           pdFALSE,
+                                           pdFALSE,
+                                           portMAX_DELAY);
+    printf("Nao travei gosto de xereca .\n");
+
+    /* xEventGroupWaitBits() returns the bits before the call returned, hence we can test which event actually
+     * happened. */
+    if (bits & WIFI_CONNECTED_BIT)
+    {
+        ESP_LOGI(TAG, "connected to ap SSID:%s password:%s",
+                 wifi, senha);
+        wifi_conectado = true;
+    }
+    else if (bits & WIFI_FAIL_BIT)
+    {
+        ESP_LOGI(TAG, "Failed to connect to SSID:%s, password:%s",
+                 wifi, senha);
+        wifi_conectado = false;
+    }
+    else
+    {
+        ESP_LOGE(TAG, "UNEXPECTED EVENT");
+    }
+
+    vEventGroupDelete(s_wifi_event_group);
+}
+
 void wifi_init_sta(void)
 {
     s_wifi_event_group = xEventGroupCreate();
@@ -281,7 +340,7 @@ void monta_e_envia_mensagem()
             tempo_atual.tm_mday, tempo_atual.tm_mon, tempo_atual.tm_year, tempo_atual.tm_hour, tempo_atual.tm_min, tempo_atual.tm_sec, tarifa, kwatt_hr, precoatual);
     xSemaphoreGive(kwh_mutex);
 
-    strcat(urlbot_f, urlbot_1);
+    strcat(urlbot_f, urlbot_1);\
     strcat(urlbot_f, numero);
     strcat(urlbot_f, urlbot_2);
     strcat(urlbot_f, whatsapp_messagae);

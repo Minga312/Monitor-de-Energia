@@ -18,6 +18,8 @@ extern int wifi_conectado;
 
 extern float kwatt_hr;
 extern float precoatual;
+//Comi o 
+
 
 void app_main()
 {
@@ -31,16 +33,13 @@ void app_main()
     read_memory();
     init_bluetooth();
     init_wifi();
-    init_readings();
+    init_readings(); 
 
-    if (wifi_conectado)
-        monta_e_envia_mensagem();
 
     while (1)
     {
-
         xSemaphoreTake(kwh_mutex, portMAX_DELAY);
-        precoatual = (kwatt_hr) * tarifa;
+        precoatual = (kwatt_hr)*tarifa;
         xSemaphoreGive(kwh_mutex);
 
         if (wifi_conectado)
@@ -63,6 +62,7 @@ void app_main()
                 salva_ultimo_valor();
             }
         }
+
 
         vTaskDelay(100 / portTICK_PERIOD_MS);
     }
