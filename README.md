@@ -1,163 +1,36 @@
-import digitalio
-import board
-import busio
-from PIL import Image, ImageDraw, ImageChops, ImageFont
-import PIL.ImageOps
-from adafruit_rgb_display import ili9341 # disp 2.2
-from adafruit_rgb_display import st7789  # disp 2.4
-from adafruit_rgb_display import st7735  # disp 0.96
+Um sistema completo para monitoramento de energia em tempo real, permitindo que você entenda seus gastos, identifique os aparelhos que mais consomem e tome decisões inteligentes para economizar na conta de luz.
 
-# First define some constants to allow easy resizing of shapes.
-BORDER = 20
-FONTSIZE = 36
+Este projeto combina hardware customizado e um aplicativo mobile para oferecer uma solução de ponta a ponta. O coração do sistema é um ESP32 que lê dados de um sensor de corrente não-invasivo e os envia para um aplicativo, onde são traduzidos em informações claras e acionáveis sobre seu consumo e gastos em Reais (R$).
 
-# Configuration for CS and DC pins (these are PiTFT defaults):
-# Display 0.96
-cs_pin_d1 = digitalio.DigitalInOut(board.CE0)
-dc_pin_d1 = digitalio.DigitalInOut(board.D24) #D24 to CS0
-reset_pin_d1 = digitalio.DigitalInOut(board.D22) #D22 to CS0
+💡 Visão Geral do Projeto
+Muitas vezes, a conta de luz chega como uma surpresa no fim do mês. O E-Mon foi criado para resolver esse problema, fornecendo um feedback instantâneo sobre seu consumo de energia.
 
-# Other Display 0.96
-cs_pin_d3 = digitalio.DigitalInOut(board.D27)
-dc_pin_d3 = digitalio.DigitalInOut(board.D17) #D24 to CS0
-reset_pin_d3 = digitalio.DigitalInOut(board.D13) #D22 to CS0
+Monitoramento em Tempo Real: Veja o consumo de energia da sua casa ou de um circuito específico em tempo real no seu celular.
 
-# cs_pin_d11 = digitalio.DigitalInOut(board.D8)
-# cs_pin_d11 = digitalio.Direction.OUTPUT
-# cs_pin_d11 = True
+Análise de Custos: O aplicativo converte o consumo em kWh para o custo real em Reais, com base na tarifa da sua concessionária de energia.
 
-# Display 2.2
-cs_pin_d2 = digitalio.DigitalInOut(board.CE1)
-dc_pin_d2 = digitalio.DigitalInOut(board.D12)#D12 to CS1
-reset_pin_d2 = digitalio.DigitalInOut(board.D16)#D16 CS1
-# Config for display baudrate (default max is 24mhz):
+Hardware Aberto: O design da placa de circuito impresso (PCB) foi feito em KiCad e está totalmente disponível.
 
-# cs_pin1.value = True
-BAUDRATE = 24000000
+Firmware Robusto: Desenvolvido com ESP-IDF (framework nativo da Espressif) para máxima performance e controle do hardware.
+⚙️  Arquitetura do Sistema
+O sistema é dividido em três componentes principais:
 
-# Setup SPI bus using hardware SPI:
-spi = board.SPI()
+Hardware (A Placa): Uma PCB customizada com um ESP32, um circuito de condicionamento de sinal para o sensor de corrente (SCT-013) e uma fonte de alimentação.
 
-disp_96 = st7735.ST7735R(spi,
-    x_offset=2, y_offset=3,
-    bgr=True, #inverts color for ST7735R and ST7789
-    rotation=90,
-    cs=cs_pin_d1,
-    dc=dc_pin_d1,
-    rst=reset_pin_d1,
-    baudrate=BAUDRATE,
-)
+Firmware (A Inteligência Embarcada): O código que roda no ESP32, responsável por:
 
-secon_96 = st7735.ST7735R(spi,
-    x_offset=2, y_offset=3,
-    bgr=True, #inverts color for ST7735R and ST7789
-    rotation=90,
-    cs=cs_pin_d3,
-    dc=dc_pin_d3,
-    rst=reset_pin_d3,
-    baudrate=BAUDRATE,
-)
+Ler os dados analógicos do sensor.
 
+Calcular a corrente RMS, potência e energia consumida (kWh).
 
-disp_22 = ili9341.ILI9341(
-    spi,
-    rotation=180, 
-    cs=cs_pin_d2,
-    dc=dc_pin_d2,
-    rst=reset_pin_d2,
-    baudrate=BAUDRATE,
-)
+Disponibilizar os dados via Bluetooth ou Whatsapp.
 
+Aplicativo Mobile (A Interface): Um app feito em MIT APP Inventor que:
 
-# Create blank image for drawing.
-# Make sure to create image with mode 'RGB' for full color.
-if disp_22.rotation % 180 == 90:
-    height = disp_22.width  # we swap height/width to rotate it to landscape!
-    width = disp_22.height
-else:
-    width = disp_22.width  # we swap height/width to rotate it to landscape!
-    height = disp_22.height
-image = Image.new("RGB", (width, height))
+Se conecta ao hardware via Bluetooth.
 
-if disp_96.rotation % 180 == 90:
-    width_96 = disp_96.height
-    height_96 = disp_96.width
-else:
-    width_96 = disp_96.width
-    height_96 = disp_96.height
-image_96 = Image.new("RGB", (width_96, height_96))
+Exibe os dados de consumo em tempo real.
 
-if secon_96.rotation % 180 == 90:
-    width_96 = secon_96.height
-    height_96 = secon_96.width
-else:
-    width_96 = secon_96.width
-    height_96 = secon_96.height
-other_img = Image.new("RGB", (width_96, height_96))
+Permite ao usuário inserir o valor da tarifa (R$/kWh).
 
-# Get drawing object to draw on image.
-draw = ImageDraw.Draw(image)
-draw_96 = ImageDraw.Draw(image_96)
-other_draw_96 = ImageDraw.Draw(other_img)
-
-# Draw a black filled box to clear the image.
-draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
-disp_22.image(image)
-
-image = Image.open("charmander.jpg")
-#image = PIL.ImageChops.invert(PIL.Image.open("charmander.jpg"))
-
-# Scale the image to the smaller screen dimension
-image_ratio = image.width / image.height
-screen_ratio = width / height
-if screen_ratio < image_ratio:
-    scaled_width = image.width * height // image.height
-    scaled_height = height
-else:
-    scaled_width = width
-    scaled_height = image.height * width // image.width
-image = image.resize((width, height), Image.BICUBIC)
-
-# Crop and center the image
-x = scaled_width // 2 - width // 2
-y = scaled_height // 2 - height // 2
-image = image.crop((x, y, x + width, y + height))
-
-# Display image.
-disp_22.image(image)
-
-# Draw a green filled box as the background
-draw_96.rectangle((0, 0, width_96, height_96), fill=(240, 128, 48))
-print(image_96)
-disp_96.image(image_96)
-
-# Load a TTF Font
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", FONTSIZE)
-
-# Draw Some Text
-text = "Fogo"
-(font_width, font_height) = font.getsize(text)
-draw_96.text(
-    (width_96 // 2 - font_width // 2, height_96 // 2 - font_height // 2),
-    text,
-    font=font,
-    fill=(0, 0, 0),
-)
-disp_96.image(image_96)
-
-# Draw a green filled box as the background
-other_draw_96.rectangle((0, 0, width_96, height_96), fill=(240, 128, 48))
-
-text = "TESTE"
-(font_width, font_height) = font.getsize(text)
-other_draw_96.text(
-    (width_96 // 2 - font_width // 2, height_96 // 2 - font_height // 2),
-    text,
-    font=font,
-    fill=(0, 0, 0),
-)
-secon_96.image(image_96)
-
-
-
-
+Calcula e exibe o custo acumulado em Reais.
