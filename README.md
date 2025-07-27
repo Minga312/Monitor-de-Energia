@@ -12,6 +12,7 @@ Análise de Custos: O aplicativo converte o consumo em kWh para o custo real em 
 Hardware Aberto: O design da placa de circuito impresso (PCB) foi feito em KiCad e está totalmente disponível.
 
 Firmware Robusto: Desenvolvido com ESP-IDF (framework nativo da Espressif) para máxima performance e controle do hardware.
+
 ⚙️  Arquitetura do Sistema
 O sistema é dividido em três componentes principais:
 
